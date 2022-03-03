@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MonsterBattleConsole.Monster
+namespace MonsterBattleConsole.MonsterRelated
 {
     public class MonsterInfo : IMonsterInfo
     {

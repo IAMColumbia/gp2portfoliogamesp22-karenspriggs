@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MonsterBattleConsole.Battle
 {
-    public class TypeDatabase
+    public class BattleTypeDatabase
     {
         public BattleType Veggie;
         public BattleType Fruit;

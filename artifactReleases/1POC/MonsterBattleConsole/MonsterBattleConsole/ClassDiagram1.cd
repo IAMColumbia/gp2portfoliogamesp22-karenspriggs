@@ -16,11 +16,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="MonsterBattleConsole.Battle.TypeDatabase">
+  <Class Name="MonsterBattleConsole.Battle.BattleTypeDatabase">
     <Position X="10.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAggAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Battle\TypeDatabase.cs</FileName>
+      <FileName>Battle\BattleTypeDatabase.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MonsterBattleConsole.Battle.MoveSet">

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MonsterBattleConsole.Battle;
 
-namespace MonsterBattleConsole.Monster
+namespace MonsterBattleConsole.MonsterRelated
 {
     public interface IMonster
     {

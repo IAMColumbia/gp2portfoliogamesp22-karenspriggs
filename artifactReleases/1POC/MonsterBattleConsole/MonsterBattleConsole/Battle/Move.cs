@@ -10,9 +10,11 @@ namespace MonsterBattleConsole.Battle
         public string Name { get; set; }
         public int basePower { get; set; }
 
-        public Move()
+        public Move(string _name, int _basePower, BattleType _moveType)
         {
-
+            this.Name = _name;
+            this.basePower = _basePower;
+            this.moveType = _moveType;
         }
     }
 }
