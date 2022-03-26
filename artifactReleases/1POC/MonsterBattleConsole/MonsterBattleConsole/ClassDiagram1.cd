@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MonsterBattleConsole.Monster.Monster" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAABAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monster\Monster.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Monster.MonsterInfo" BaseTypeListCollapsed="true">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monster\MonsterInfo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.BattleTypeDatabase">
+    <Position X="10.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAggAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\BattleTypeDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.MoveSet">
+    <Position X="19.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\MoveSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.Move">
+    <Position X="14.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Battle\Move.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.BattleType">
+    <Position X="12.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\BattleType.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.BattleStats">
+    <Position X="18" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAABAIADAAABAAAAAgAAAAA=</HashCode>
+      <FileName>Battle\BattleStats.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.Battle">
+    <Position X="8.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\Battle.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MonsterBattleConsole.Battle.BattleTurn">
+    <Position X="6.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\BattleTurn.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="MonsterBattleConsole.Monster.IMonster">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAABAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monster\IMonster.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Monster.IMonsterInfo">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Monster\IMonsterInfo.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IMoveSet">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAACIABAAAAAEAA=</HashCode>
+      <FileName>Battle\IMoveSet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IMove">
+    <Position X="14.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Battle\IMove.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IBattleType">
+    <Position X="12.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAEAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\IBattleType.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IBattleTurn">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\IBattleTurn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IBattleStats">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAABAIADAAABAAAAAgAAAAA=</HashCode>
+      <FileName>Battle\IBattleStats.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MonsterBattleConsole.Battle.IBattle">
+    <Position X="8.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Battle\IBattle.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
