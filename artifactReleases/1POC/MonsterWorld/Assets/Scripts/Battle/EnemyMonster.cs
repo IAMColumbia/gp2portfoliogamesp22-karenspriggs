@@ -9,7 +9,7 @@ public class EnemyMonster : BattleStats
     
     public void DetermineMove()
     {
-        moveIndex = Random.RandomRange(0, 4);
+        moveIndex = Random.Range(0, 4);
     }
 
     public Move UseMove()

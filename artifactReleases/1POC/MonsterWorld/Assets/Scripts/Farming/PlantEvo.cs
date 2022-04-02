@@ -13,9 +13,13 @@ public class PlantEvo
 {
     public PlantEvoState evoState;
     public Sprite currentSprite;
+    public Sprite sproutSprite;
+    public Sprite plantSprite;
+
     public string plantMonKey;
     public Monster plantMon;
-    bool hasGrown;
+
+    public bool hasGrown;
 
     public PlantEvo()
     {
@@ -25,7 +29,10 @@ public class PlantEvo
     void Setup()
     {
         this.evoState = PlantEvoState.Seed;
-        //this.currentSprite = 
+        this.currentSprite = Resources.Load<Sprite>("Sprites/seed");
+        this.sproutSprite = Resources.Load<Sprite>("Sprites/sprout");
+        this.plantSprite = Resources.Load<Sprite>("Sprites/plant");
+
         hasGrown = false;
     }
 
@@ -35,13 +42,30 @@ public class PlantEvo
         {
             case (PlantEvoState.Seed):
                 this.evoState = PlantEvoState.Sprout;
+                this.currentSprite = sproutSprite;
                 break;
             case (PlantEvoState.Sprout):
                 this.evoState = PlantEvoState.Plant;
+                this.currentSprite = plantSprite;
                 break;
             case (PlantEvoState.Plant):
-                hasGrown = true;
+                GrowMonster();
                 break;
         }
+
+        Debug.Log(evoState);
+    }
+
+    public void GrowMonster()
+    {
+        hasGrown = true;
+        FarmManager.Instance.farmMonsters.Add(plantMon);
+        Debug.Log("Added a monster");
+        FarmManager.Instance.PrintMonsterList();
+    }
+
+    public Sprite SetCurrentSprite()
+    {
+        return currentSprite;
     }
 }

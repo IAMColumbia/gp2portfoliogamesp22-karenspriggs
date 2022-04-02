@@ -19,6 +19,14 @@ public class BattleStats : MonoBehaviour
 
     public string Name;
 
+    public BattleStats()
+    {
+        this.monsterMoveSet = new MoveSet();
+        this.monsterBattleType = BattleTypeDatabase.FlowerType;
+        Debug.Log(monsterBattleType.Name);
+        this.monsterStats = new Stats(20, 20, 2, 2, 2);
+    }
+
     private void Start()
     {
         this.monsterMoveSet = new MoveSet();
