@@ -14,8 +14,8 @@ public enum BattleState
 
 public class BattleManager : MonoBehaviour
 {
-    public BattleStats playerMonster;
-    //public BattleStats enemyMonster;
+    public UnityMonster playerMonster;
+    
     public EnemyMonster enemyMonster;
 
     public BattleUIManager battleUI;
@@ -30,57 +30,57 @@ public class BattleManager : MonoBehaviour
     // Methods for player using moves via buttons in UI
     public void UseMoveOne()
     {
-        int damage = playerMonster.DetermineDamage(playerMonster.MonsterMoveSet.Move1, enemyMonster);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster);
+        int damage = playerMonster.monster.battleStats.DetermineDamage(playerMonster.monster.battleStats.MonsterMoveSet.Move1, enemyMonster.battleStats);
+        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
         }
 
-        battleUI.UseMove(damage, newEnemyHP, playerMonster.MonsterMoveSet.Move1.Name);
+        battleUI.UseMove(damage, newEnemyHP, playerMonster.monster.battleStats.MonsterMoveSet.Move1.Name);
         EnemyTurn();
     }
 
     public void UseMoveTwo()
     {
-        int damage = playerMonster.DetermineDamage(playerMonster.MonsterMoveSet.Move2, enemyMonster);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster);
+        int damage = playerMonster.monster.battleStats.DetermineDamage(playerMonster.monster.battleStats.MonsterMoveSet.Move2, enemyMonster.battleStats);
+        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
         }
 
-        battleUI.UseMove(damage, newEnemyHP, playerMonster.MonsterMoveSet.Move2.Name);
+        battleUI.UseMove(damage, newEnemyHP, playerMonster.monster.battleStats.MonsterMoveSet.Move2.Name);
         EnemyTurn();
     }
 
     public void UseMoveThree()
     {
-        int damage = playerMonster.DetermineDamage(playerMonster.MonsterMoveSet.Move3, enemyMonster);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster);
+        int damage = playerMonster.monster.battleStats.DetermineDamage(playerMonster.monster.battleStats.MonsterMoveSet.Move3, enemyMonster.battleStats);
+        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
         }
 
-        battleUI.UseMove(damage, newEnemyHP, playerMonster.MonsterMoveSet.Move3.Name);
+        battleUI.UseMove(damage, newEnemyHP, playerMonster.monster.battleStats.MonsterMoveSet.Move3.Name);
         EnemyTurn(); 
     }
 
     public void UseMoveFour()
     {
-        int damage = playerMonster.DetermineDamage(playerMonster.MonsterMoveSet.Move4, enemyMonster);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster);
+        int damage = playerMonster.monster.battleStats.DetermineDamage(playerMonster.monster.battleStats.MonsterMoveSet.Move4, enemyMonster.battleStats);
+        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
         }
 
-        battleUI.UseMove(damage, newEnemyHP, playerMonster.MonsterMoveSet.Move4.Name);
+        battleUI.UseMove(damage, newEnemyHP, playerMonster.monster.battleStats.MonsterMoveSet.Move4.Name);
         EnemyTurn();
     }
 
@@ -96,8 +96,8 @@ public class BattleManager : MonoBehaviour
     {
         Move enemyMove = enemyMonster.UseMove();
 
-        int damage = enemyMonster.DetermineDamage(enemyMove, playerMonster);
-        int newPlayerHP = ApplyDamage(damage, playerMonster);
+        int damage = enemyMonster.battleStats.DetermineDamage(enemyMove, playerMonster.monster.battleStats);
+        int newPlayerHP = ApplyDamage(damage, playerMonster.monster.battleStats);
 
         if (newPlayerHP < 0)
         {
@@ -114,7 +114,8 @@ public class BattleManager : MonoBehaviour
 
     public void ResetHPForTesting()
     {
-        playerMonster.MonsterStats.CurrentHP = playerMonster.MonsterStats.MaxHP;
-        enemyMonster.MonsterStats.CurrentHP = enemyMonster.MonsterStats.MaxHP;
+        playerMonster.monster.battleStats.MonsterStats.CurrentHP = playerMonster.monster.battleStats.MonsterStats.MaxHP;
+        enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
+        enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
     }
 }

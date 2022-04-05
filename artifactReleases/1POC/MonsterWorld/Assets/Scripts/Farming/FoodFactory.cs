@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FoodFactory
 {
-    private FoodFactory instance;
-    public FoodFactory Instance
+    private static FoodFactory instance;
+    public static FoodFactory Instance
     {
         get
         {
@@ -38,19 +38,19 @@ public class FoodFactory
             switch (value)
             {
                 case ("HP Berry"):
-                    f = new Food("HP Berry", 0, 1);
+                    f = new Food("HP Berry", 0, 1, "Sprites/hpberry");
                     foodDictionary.Add("HP Berry", f);
                     break;
                 case ("ATK Berry"):
-                    f = new Food("ATK Berry", 1, 1);
+                    f = new Food("ATK Berry", 1, 1, "Sprites/attackberry");
                     foodDictionary.Add("ATK Berry", f);
                     break;
                 case ("DEF Berry"):
-                    f = new Food("DEF Berry", 2, 1);
+                    f = new Food("DEF Berry", 2, 1, "Sprites/defberry");
                     foodDictionary.Add("DEF Berry", f);
                     break;
                 case ("SPD Berry"):
-                    f = new Food("SPD Berry", 3, 1);
+                    f = new Food("SPD Berry", 3, 1, "Sprites/speedberry");
                     foodDictionary.Add("SPD Berry", f);
                     break;
             }

@@ -16,9 +16,6 @@ public class PlantEvo
     public Sprite sproutSprite;
     public Sprite plantSprite;
 
-    public string plantMonKey;
-    public Monster plantMon;
-
     public bool hasGrown;
 
     public PlantEvo()
@@ -49,19 +46,11 @@ public class PlantEvo
                 this.currentSprite = plantSprite;
                 break;
             case (PlantEvoState.Plant):
-                GrowMonster();
+                hasGrown = true;
                 break;
         }
 
         Debug.Log(evoState);
-    }
-
-    public void GrowMonster()
-    {
-        hasGrown = true;
-        FarmManager.Instance.farmMonsters.Add(plantMon);
-        Debug.Log("Added a monster");
-        FarmManager.Instance.PrintMonsterList();
     }
 
     public Sprite SetCurrentSprite()

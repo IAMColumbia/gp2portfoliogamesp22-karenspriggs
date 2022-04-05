@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MonsterFactory
 {
-    private MonsterFactory instance;
-    public MonsterFactory Instance
+    private static MonsterFactory instance;
+    public static MonsterFactory Instance
     {
         get
         {
@@ -35,7 +35,18 @@ public class MonsterFactory
         }
         else
         {
-            
+            switch (value)
+            {
+                case ("SunflowerLion"):
+                    m = new Monster("SunflowerLion");
+                    break;
+                case ("Advodoggo"):
+                    m = new Monster("Advodoggo");
+                    break;
+                case ("Strawbunny"):
+                    m = new Monster("Strawbunny");
+                    break;
+            }
         }
 
         return m;

@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Plant : MonoBehaviour
 {
-    PlantEvo plantEvo;
-    public Monster monster;
+    protected PlantEvo plantEvo;
     SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-        monster.gameObject.SetActive(false);
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         plantEvo = new PlantEvo();
-        plantEvo.plantMon = monster;
     }
 
     // Update is called once per frame
@@ -37,14 +34,13 @@ public class Plant : MonoBehaviour
         }
     }
 
-    void EvolvePlant()
+    protected virtual void EvolvePlant()
     {
         plantEvo.Evolve();
         spriteRenderer.sprite = plantEvo.SetCurrentSprite();
 
         if (plantEvo.hasGrown)
         {
-            monster.gameObject.SetActive(true);
             this.gameObject.SetActive(false);
         }
     }

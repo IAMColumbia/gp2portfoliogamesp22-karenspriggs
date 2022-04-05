@@ -2,31 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster
 {
     public BattleStats battleStats;
     public MonsterMovement monMonvement;
 
-    public float speed;
-    public int max;
-
-    public Monster()
+    public Monster(string _statsKey)
     {
-        battleStats = new BattleStats();
+        this.battleStats = BattleStatsFactory.Instance.GetStats(_statsKey);
     }
-
-    private void Start()
-    {
-        monMonvement = new MonsterMovement();
-        monMonvement.position = this.transform.position;
-        monMonvement.Speed = speed;
-        monMonvement.max = max;
-    }
-
-    private void Update()
-    {
-        monMonvement.DetermineState();
-        this.transform.position = monMonvement.position;
-    }
-
 }

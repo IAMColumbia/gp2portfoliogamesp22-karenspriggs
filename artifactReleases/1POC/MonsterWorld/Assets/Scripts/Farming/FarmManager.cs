@@ -6,6 +6,7 @@ public class FarmManager
 {
     public List<Monster> farmMonsters;
     public List<Monster> playerMonsters;
+    public List<Food> playerFood;
     private static FarmManager instance;
 
     public static FarmManager Instance
@@ -25,8 +26,9 @@ public class FarmManager
     public FarmManager()
     {
         farmMonsters = new List<Monster>();
-        //Debug.Log("Created farm manager");
+        Debug.Log("Created farm manager");
         playerMonsters = new List<Monster>();
+        playerFood = new List<Food>();
     }
 
     public void PrintMonsterList()

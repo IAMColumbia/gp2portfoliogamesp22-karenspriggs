@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BattleStats : MonoBehaviour
+public class BattleStats
 {
     private MoveSet monsterMoveSet;
     private BattleType monsterBattleType;
@@ -13,26 +13,27 @@ public class BattleStats : MonoBehaviour
         get { return monsterMoveSet; }
     }
 
+    string name;
+
     public BattleType MonsterBattleType { get { return monsterBattleType; } }
 
     public Stats MonsterStats { get { return monsterStats; } }
 
-    public string Name;
+    public string Name { get { return name; } set { name = value; }  }
 
     public BattleStats()
     {
         this.monsterMoveSet = new MoveSet();
         this.monsterBattleType = BattleTypeDatabase.FlowerType;
-        Debug.Log(monsterBattleType.Name);
         this.monsterStats = new Stats(20, 20, 2, 2, 2);
     }
 
-    private void Start()
+    public BattleStats(BattleType _monType, string _moveSetKey, string _monsterName)
     {
-        this.monsterMoveSet = new MoveSet();
-        this.monsterBattleType = BattleTypeDatabase.FlowerType;
-        Debug.Log(monsterBattleType.Name);
+        this.monsterBattleType = _monType;
+        this.monsterMoveSet = MoveSetFactory.Instance.GetMoveSet(_moveSetKey);
         this.monsterStats = new Stats(20, 20, 2, 2, 2);
+        this.name = _monsterName;
     }
 
     // This is in here because it can have access to the battle stats of its own monster
@@ -44,9 +45,6 @@ public class BattleStats : MonoBehaviour
         // Check if the type of the move is good or bad against the type of the other mon
         if (move.MoveType == otherMonster.monsterBattleType.TypeWeakAgainst)
         {
-            //Debug.Log("Type weak against");
-            //Debug.Log(move.MoveType);
-            //Debug.Log(otherMonster.monsterBattleType.TypeWeakAgainst);
             damage *= 2;
         } 
         

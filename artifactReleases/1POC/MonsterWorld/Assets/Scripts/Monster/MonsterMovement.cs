@@ -93,8 +93,6 @@ public class MonsterMovement
             //currentSpeedY = -currentSpeedY;
         }
 
-        Debug.Log(wanderpoint);
-
         this.movestate = MonsterMoveState.Wandering;
     }
 

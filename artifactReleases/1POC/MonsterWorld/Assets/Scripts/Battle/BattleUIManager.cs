@@ -41,41 +41,41 @@ public class BattleUIManager : MonoBehaviour
 
     public void SetupUI()
     {
-        this.playerMonName.text = battleManager.playerMonster.Name;
-        this.enemyMonName.text = battleManager.enemyMonster.Name;
+        this.playerMonName.text = battleManager.playerMonster.monster.battleStats.Name;
+        //this.enemyMonName.text = battleManager.enemyMonster.battleStats.Name;
 
-        this.playerMonHP.text = $"{battleManager.playerMonster.MonsterStats.CurrentHP} / {battleManager.playerMonster.MonsterStats.MaxHP}";
-        this.enemyMonHP.text = $"{battleManager.enemyMonster.MonsterStats.CurrentHP} / {battleManager.enemyMonster.MonsterStats.MaxHP}";
+        this.playerMonHP.text = $"{battleManager.playerMonster.monster.battleStats.MonsterStats.CurrentHP} / {battleManager.playerMonster.monster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
 
-        this.playerMonType.text = $"{battleManager.playerMonster.MonsterBattleType.Name} Type";
-        this.enemyMonType.text = $"{battleManager.enemyMonster.MonsterBattleType.Name} Type";
+        this.playerMonType.text = $"{battleManager.playerMonster.monster.battleStats.MonsterBattleType.Name} Type";
+        this.enemyMonType.text = $"{battleManager.enemyMonster.battleStats.MonsterBattleType.Name} Type";
 
         SetUpButtons();
     }
 
     public void SetUpButtons()
     {
-        move1ButtonText.text = battleManager.playerMonster.MonsterMoveSet.Move1.Name;
-        move2ButtonText.text = battleManager.playerMonster.MonsterMoveSet.Move2.Name;
-        move3ButtonText.text = battleManager.playerMonster.MonsterMoveSet.Move3.Name;
-        move4ButtonText.text = battleManager.playerMonster.MonsterMoveSet.Move4.Name;
+        move1ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move1.Name;
+        move2ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move2.Name;
+        move3ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move3.Name;
+        move4ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move4.Name;
     }
 
     public void UseMove(int damage, int newHP, string moveName)
     {
-        this.enemyMonHP.text = $"{newHP} / {battleManager.enemyMonster.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{newHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
     }
 
     public void UseEnemyMove(int damage, int newHP, string moveName)
     {
-        this.playerMonHP.text = $"{newHP} / {battleManager.enemyMonster.MonsterStats.MaxHP}";
-        this.enemyMoveText.text = $"Enemy {battleManager.enemyMonster.Name} used {moveName}!";
+        this.playerMonHP.text = $"{newHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMoveText.text = $"Enemy {battleManager.enemyMonster.battleStats.Name} used {moveName}!";
     }
 
     public void ResetHP()
     {
         this.battleManager.ResetHPForTesting();
-        this.playerMonHP.text = $"{battleManager.playerMonster.MonsterStats.CurrentHP} / {battleManager.playerMonster.MonsterStats.MaxHP}";
-        this.enemyMonHP.text = $"{battleManager.enemyMonster.MonsterStats.CurrentHP} / {battleManager.enemyMonster.MonsterStats.MaxHP}";
+        this.playerMonHP.text = $"{battleManager.playerMonster.monster.battleStats.MonsterStats.CurrentHP} / {battleManager.playerMonster.monster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
     }
 }

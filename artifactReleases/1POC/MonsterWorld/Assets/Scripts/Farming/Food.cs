@@ -10,12 +10,14 @@ public class Food
     // 0 is HP, 1 is Power, 2 is Def, 3 is Speed
     public int Stat;
     public string Name;
+    public Sprite FoodSprite;
 
-    public Food(string _name, int _stat, int _value)
+    public Food(string _name, int _stat, int _value, string _spritepath)
     {
         this.Name = _name;
         this.Stat = _stat;
         this.value = _value;
+        this.FoodSprite = Resources.Load<Sprite>(_spritepath);
     }
 
     void Feed(Stats monStats)
