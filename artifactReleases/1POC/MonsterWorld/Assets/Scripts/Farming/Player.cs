@@ -5,12 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     PlayerMovement playerMovement;
+    PlayerInventory playerInventory;
+
     public int movementIncrement;
 
     // Start is called before the first frame update
     void Start()
     {
         playerMovement = new PlayerMovement(transform.position, movementIncrement);
+        playerInventory = new PlayerInventory();
     }
 
     // Update is called once per frame
