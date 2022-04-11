@@ -22,4 +22,9 @@ public class PlayerInventory
     {
         this.playerFood.Add(f);
     }
+
+    public Monster GetBattler(int index)
+    {
+        return playerMonsters[index];
+    }
 }

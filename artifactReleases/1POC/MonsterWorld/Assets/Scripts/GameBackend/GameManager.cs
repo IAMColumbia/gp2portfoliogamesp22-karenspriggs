@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     BattleManager battleManager;
     FarmManager farmManager;
+    GameStateManager gameStateManager;
+    UIManager uiManager;
     
     // Start is called before the first frame update
     void Start()

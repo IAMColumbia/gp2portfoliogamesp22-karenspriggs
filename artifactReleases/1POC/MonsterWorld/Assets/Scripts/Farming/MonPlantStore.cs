@@ -2,17 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonPlantStore : MonoBehaviour
+public class MonPlantStore 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<MonsterPlant> monPlantsForSale;
 
-    // Update is called once per frame
-    void Update()
+    public MonPlantStore()
     {
-        
+        this.monPlantsForSale = new List<MonsterPlant>();
     }
 }

@@ -18,6 +18,9 @@ public class BattleManager : MonoBehaviour
     
     public EnemyMonster enemyMonster;
 
+    public Battler playerBattler;
+    public Battler enemyBattler;
+
     public BattleUIManager battleUI;
     public BattleState battleState;
 
