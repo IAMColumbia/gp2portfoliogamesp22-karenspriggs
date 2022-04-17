@@ -5,7 +5,6 @@ using UnityEngine;
 public class UnityMonStore : MonoBehaviour
 {
     MonPlantStore monPlantStore;
-    PlantStoreUI plantStoreUI;
 
     void Start()
     {

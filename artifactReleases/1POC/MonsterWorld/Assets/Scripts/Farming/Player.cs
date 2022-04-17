@@ -5,7 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     PlayerMovement playerMovement;
-    PlayerInventory playerInventory;
+    public PlayerInventory playerInventory;
+
+    public static Player Instance;
 
     public int movementIncrement;
 

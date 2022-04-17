@@ -11,6 +11,8 @@ public class PlayerInventory
     {
         playerMonsters = new List<Monster>();
         playerFood = new List<Food>();
+
+        AddMonster(MonsterFactory.Instance.GetMon("Advodoggo"));
     }
 
     public void AddMonster(Monster m)
