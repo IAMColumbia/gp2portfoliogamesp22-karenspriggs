@@ -37,6 +37,32 @@ public class PlayerInventory
         this.playerFoodPlants.Add(fp);
     }
 
+    public string PrintMonPlantInventory()
+    {
+        string message = "";
+
+        foreach (MonsterPlant mp in playerMonPlants)
+        {
+            message += mp.plantMonKey;
+            message += "\n";
+        }
+
+        return message;
+    }
+
+    public string PrintFoodPlantInventory()
+    {
+        string message = "";
+
+        foreach (FoodPlant fp in playerFoodPlants)
+        {
+            message += fp.foodKey;
+            message += "\n";
+        }
+
+        return message;
+    }
+
     public Monster GetBattler(int index)
     {
         return playerMonsters[index];

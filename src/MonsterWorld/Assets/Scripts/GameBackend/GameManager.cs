@@ -35,4 +35,16 @@ public class GameManager : MonoBehaviour
     {
         gameStateManager.SetFarmingState();
     }
+
+    public void EnterMonShop()
+    {
+        uiManager.EnterMonShop();
+        uiManager.ExitFoodShop();
+    }
+
+    public void EnterFoodShop()
+    {
+        uiManager.EnterFoodShop();
+        uiManager.ExitMonShop();
+    }
 }

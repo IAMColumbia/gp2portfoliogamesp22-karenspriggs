@@ -18,6 +18,11 @@ public class Player : MonoBehaviour
         playerInventory = new PlayerInventory();
     }
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
