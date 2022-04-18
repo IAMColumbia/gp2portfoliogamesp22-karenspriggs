@@ -4,10 +4,28 @@ using UnityEngine;
 
 public class FoodPlantStore
 {
-    public List<FoodPlant> foodPlantsForSale;
+    public Dictionary<string, FoodPlant> foodPlantsForSale;
 
     public FoodPlantStore()
     {
-        this.foodPlantsForSale = new List<FoodPlant>();
+        this.foodPlantsForSale = FoodPlantFactory.Instance.foodPlantDictionary;
+    }
+
+    public void SellFoodPlant(string key)
+    {
+        // Bruh idk
+        Player.Instance.playerInventory.AddFoodPlant(foodPlantsForSale[key]);
+    }
+
+    string PrintStock()
+    {
+        string message = "";
+
+        foreach (FoodPlant fp in foodPlantsForSale.Values)
+        {
+            message += fp.foodKey;
+        }
+
+        return message;
     }
 }

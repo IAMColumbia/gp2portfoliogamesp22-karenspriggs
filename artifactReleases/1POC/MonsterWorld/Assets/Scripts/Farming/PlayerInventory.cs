@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerInventory 
 {
-    public List<Monster> playerMonsters;
-    public List<Food> playerFood;
+    private List<Monster> playerMonsters;
+    private List<Food> playerFood;
+    private List<MonsterPlant> playerMonPlants;
+    private List<FoodPlant> playerFoodPlants;
 
     public PlayerInventory()
     {
@@ -23,6 +25,16 @@ public class PlayerInventory
     public void AddFood(Food f)
     {
         this.playerFood.Add(f);
+    }
+
+    public void AddMonPlant(MonsterPlant mp)
+    {
+        this.playerMonPlants.Add(mp);
+    }
+
+    public void AddFoodPlant(FoodPlant fp)
+    {
+        this.playerFoodPlants.Add(fp);
     }
 
     public Monster GetBattler(int index)

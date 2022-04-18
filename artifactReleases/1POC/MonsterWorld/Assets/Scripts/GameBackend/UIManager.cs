@@ -1,18 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+public class UIManager
 {
-    // Start is called before the first frame update
-    void Start()
+    GameObject MonPlantShopUIPanel;
+    GameObject FoodPlantShopUIPanel;
+
+    public UIManager(GameObject monplantUI, GameObject foodplantUI)
     {
-        
+        this.MonPlantShopUIPanel = monplantUI;
+        this.FoodPlantShopUIPanel = foodplantUI;
+
+        this.MonPlantShopUIPanel.gameObject.SetActive(false);
+        this.FoodPlantShopUIPanel.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnterFoodShop()
     {
-        
+        this.FoodPlantShopUIPanel.gameObject.SetActive(true);
+    }
+
+    public void ExitFoodShop()
+    {
+        this.FoodPlantShopUIPanel.gameObject.SetActive(false);
+    } 
+
+    public void EnterMonShop()
+    {
+        this.MonPlantShopUIPanel.gameObject.SetActive(true);
+    }
+
+    public void ExitMonShop()
+    {
+        this.MonPlantShopUIPanel.gameObject.SetActive(false);
     }
 }

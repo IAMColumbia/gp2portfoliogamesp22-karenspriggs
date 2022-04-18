@@ -51,4 +51,17 @@ public class GameStateManager
             g.SetActive(false);
         }
     }
+
+    void DeactivateAll()
+    {
+        foreach (GameObject g in battleGameObjects)
+        {
+            g.SetActive(false);
+        }
+
+        foreach (GameObject g in farmingGameObjects)
+        {
+            g.SetActive(false);
+        }
+    }
 }

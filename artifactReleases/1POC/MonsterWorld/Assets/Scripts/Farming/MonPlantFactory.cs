@@ -2,17 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonPlantFactory : MonoBehaviour
+public class MonPlantFactory
 {
-    // Start is called before the first frame update
-    void Start()
+    private static MonPlantFactory instance;
+    public static MonPlantFactory Instance
     {
-        
+        get
+        {
+            if (instance == null)
+            {
+                instance = new MonPlantFactory();
+            }
+
+            return instance;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public Dictionary<string, MonsterPlant> monPlantDictionary;
+
+    public MonPlantFactory()
     {
-        
+        monPlantDictionary = new Dictionary<string, MonsterPlant>();
+        FillDictionary();
+    }
+
+    void FillDictionary()
+    {
+        monPlantDictionary.Add("SunflowerLion", new MonsterPlant("SunflowerLion"));
+        monPlantDictionary.Add("Advodoggo", new MonsterPlant("Advodoggo"));
+        monPlantDictionary.Add("Strawbunny", new MonsterPlant("Strawbunny"));
+        monPlantDictionary.Add("Raccorn", new MonsterPlant("Raccorn"));
+    }
+
+    public MonsterPlant GetMonPlant(string value)
+    {
+        MonsterPlant mp = null;
+
+        if (monPlantDictionary.ContainsKey(value))
+        {
+            mp = monPlantDictionary[value];
+        }
+        else
+        {
+            Debug.Log($"{value} is not a monster plant");
+        }
+
+        return mp;
     }
 }

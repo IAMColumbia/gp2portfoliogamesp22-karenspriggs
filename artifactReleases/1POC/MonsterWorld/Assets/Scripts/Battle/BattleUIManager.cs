@@ -42,7 +42,7 @@ public class BattleUIManager : MonoBehaviour
     public void SetupUI()
     {
         this.playerMonName.text = battleManager.playerMonster.monster.battleStats.Name;
-        //this.enemyMonName.text = battleManager.enemyMonster.battleStats.Name;
+        this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
 
         this.playerMonHP.text = $"{battleManager.playerMonster.monster.battleStats.MonsterStats.CurrentHP} / {battleManager.playerMonster.monster.battleStats.MonsterStats.MaxHP}";
         this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";

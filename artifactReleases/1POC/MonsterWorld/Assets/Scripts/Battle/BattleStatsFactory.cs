@@ -23,6 +23,15 @@ public class BattleStatsFactory
     public BattleStatsFactory()
     {
         statsDictionary = new Dictionary<string, BattleStats>();
+        FillDictionary();
+    }
+
+    void FillDictionary()
+    {
+        statsDictionary.Add("SunflowerLion", new BattleStats(BattleTypeDatabase.FlowerType, "Default", "SunflowerLion"));
+        statsDictionary.Add("Advodoggo", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Advodoggo"));
+        statsDictionary.Add("Strawbunny", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Strawbunny"));
+        statsDictionary.Add("Raccorn", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Raccorn"));
     }
 
     public BattleStats GetStats(string value)
@@ -35,18 +44,7 @@ public class BattleStatsFactory
         }
         else
         {
-            switch (value)
-            {
-                case ("SunflowerLion"):
-                    bs = new BattleStats(BattleTypeDatabase.FlowerType, "Default", "SunflowerLion");
-                    break;
-                case ("Advodoggo"):
-                    bs = new BattleStats(BattleTypeDatabase.FruitType, "Default", "Advodoggo");
-                    break;
-                case ("Strawbunny"):
-                    bs = new BattleStats(BattleTypeDatabase.FruitType, "Default", "Strawbunny");
-                    break;
-            }
+            Debug.Log($"{value} is not a monster");
         }
 
         return bs;

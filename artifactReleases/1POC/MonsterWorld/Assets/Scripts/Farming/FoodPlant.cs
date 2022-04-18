@@ -5,12 +5,20 @@ using UnityEngine;
 public class FoodPlant : Plant
 {
     public UnityFood unityFood;
+    public string foodKey;
+    public Food food;
 
     // Start is called before the first frame update
     void Start()
     {
         base.Start();
         unityFood.gameObject.SetActive(false);
+    }
+
+    public FoodPlant(string key)
+    {
+        foodKey = key;
+        this.food = FoodFactory.Instance.GetFood(key);
     }
 
     // Update is called once per frame

@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public List<GameObject> battleObjects;
     public List<GameObject> farmingObjects;
+    public GameObject monPlantShopUI;
+    public GameObject foodPlantShopUI;
 
     BattleManager battleManager;
     FarmManager farmManager;
@@ -20,12 +22,8 @@ public class GameManager : MonoBehaviour
         gameStateManager.battleGameObjects = battleObjects;
         gameStateManager.farmingGameObjects = farmingObjects;
         gameStateManager.SetFarmingState();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        uiManager = new UIManager(monPlantShopUI, foodPlantShopUI);
     }
 
     public void TurnOnBattleState()

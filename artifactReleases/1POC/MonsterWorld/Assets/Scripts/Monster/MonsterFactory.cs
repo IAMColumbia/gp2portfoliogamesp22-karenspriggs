@@ -23,6 +23,15 @@ public class MonsterFactory
     public MonsterFactory()
     {
         monDictionary = new Dictionary<string, Monster>();
+        FillDictionary();
+    }
+
+    void FillDictionary()
+    {
+        monDictionary.Add("SunflowerLion", new Monster("SunflowerLion"));
+        monDictionary.Add("Advodoggo", new Monster("Advodoggo"));
+        monDictionary.Add("Strawbunny", new Monster("Strawbunny"));
+        monDictionary.Add("Raccorn", new Monster("Raccorn"));
     }
 
     public Monster GetMon(string value)
@@ -35,18 +44,7 @@ public class MonsterFactory
         }
         else
         {
-            switch (value)
-            {
-                case ("SunflowerLion"):
-                    m = new Monster("SunflowerLion");
-                    break;
-                case ("Advodoggo"):
-                    m = new Monster("Advodoggo");
-                    break;
-                case ("Strawbunny"):
-                    m = new Monster("Strawbunny");
-                    break;
-            }
+            Debug.Log($"{value} is not a monster");
         }
 
         return m;

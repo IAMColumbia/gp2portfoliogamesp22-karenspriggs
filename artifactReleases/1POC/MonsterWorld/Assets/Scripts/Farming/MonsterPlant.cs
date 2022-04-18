@@ -16,6 +16,12 @@ public class MonsterPlant : Plant
         uMonster.gameObject.SetActive(false);
     }
 
+    public MonsterPlant(string key)
+    {
+        this.plantMonKey = key;
+        this.monster = MonsterFactory.Instance.GetMon(key);
+    }
+
     // Update is called once per frame
     void Update()
     {

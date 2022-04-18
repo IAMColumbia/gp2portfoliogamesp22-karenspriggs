@@ -11,9 +11,25 @@ public class UnityFoodStore : MonoBehaviour
         foodPlantStore = new FoodPlantStore();
     }
 
-    // Update is called once per frame
-    void Update()
+    // Connect to UI
+
+    public void BuyHPBerry()
     {
-        
+        foodPlantStore.SellFoodPlant("HP Berry");
+    }
+
+    public void BuyATKBerry()
+    {
+        foodPlantStore.SellFoodPlant("ATK Berry");
+    } 
+
+    public void BuyDEFBerry() 
+    {
+        foodPlantStore.SellFoodPlant("DEF Berry");
+    }
+
+    public void BuySPDBerry()
+    {
+        foodPlantStore.SellFoodPlant("SPD Berry");
     }
 }

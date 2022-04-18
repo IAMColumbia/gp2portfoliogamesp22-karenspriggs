@@ -11,9 +11,23 @@ public class UnityMonStore : MonoBehaviour
         monPlantStore = new MonPlantStore();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BuySunflowerLion()
     {
-        
+        monPlantStore.SellMonPlant("SunflowerLion");
+    }
+
+    public void BuyAdvodoggo()
+    {
+        monPlantStore.SellMonPlant("Advodoggo");
+    }
+
+    public void BuyStrawbunny()
+    {
+        monPlantStore.SellMonPlant("Strawbunny");
+    }
+
+    public void BuyRaccorn()
+    {
+        monPlantStore.SellMonPlant("Raccorn");
     }
 }
