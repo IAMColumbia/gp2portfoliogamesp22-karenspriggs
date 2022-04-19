@@ -5,8 +5,8 @@ using UnityEngine;
 public class FarmManager
 {
     public List<Monster> farmMonsters;
-    public List<Monster> playerMonsters;
-    public List<Food> playerFood;
+    public MonsterStorage monsterStorage;
+    
     private static FarmManager instance;
 
     public static FarmManager Instance
@@ -26,9 +26,8 @@ public class FarmManager
     public FarmManager()
     {
         farmMonsters = new List<Monster>();
-        Debug.Log("Created farm manager");
-        playerMonsters = new List<Monster>();
-        playerFood = new List<Food>();
+        monsterStorage = new MonsterStorage();
+        //Debug.Log("Created farm manager");
     }
 
     public void PrintMonsterList()
