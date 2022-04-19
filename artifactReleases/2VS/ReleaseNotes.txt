@@ -1,1 +1,8 @@
 Release Notes version 2 Vertical Slice
+- I was not able to make the amount of progress I wanted to because of covid
+- I made everything one scene because that's what I was advised to do
+- All of the UI is under the same canvas but organized by panels to be switched
+on/off
+- Started code for monster plant shop and food plant shop
+- Started code for the game manager that handles UI and game states
+- Added factories for the monster plants and food plants
