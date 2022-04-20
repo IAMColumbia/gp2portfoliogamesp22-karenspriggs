@@ -31,6 +31,7 @@ public class PlantEvo
         this.plantSprite = Resources.Load<Sprite>("Sprites/plant");
 
         hasGrown = false;
+        //Debug.Log("Plant has been set up");
     }
 
     public void Evolve()

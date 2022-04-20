@@ -10,6 +10,10 @@ public class GameManager : MonoBehaviour
     public GameObject monPlantShopUI;
     public GameObject foodPlantShopUI;
 
+    public MonsterPlantPlot[] monsterPlantPlots;
+    public FoodPlantPlot[] foodPlantPlots;
+    public int plotSize;
+
     BattleManager battleManager;
     FarmManager farmManager;
     GameStateManager gameStateManager;
@@ -23,7 +27,17 @@ public class GameManager : MonoBehaviour
         gameStateManager.farmingGameObjects = farmingObjects;
         gameStateManager.SetFarmingState();
 
+        farmManager = new FarmManager(plotSize, monsterPlantPlots, foodPlantPlots);
+
         uiManager = new UIManager(monPlantShopUI, foodPlantShopUI);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            farmManager.plotHandler.FillFirstFoodPlot(FoodPlantFactory.Instance.GetFoodPlant("HP Berry"));
+        }
     }
 
     public void TurnOnBattleState()

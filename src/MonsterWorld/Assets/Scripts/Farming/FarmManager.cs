@@ -6,28 +6,13 @@ public class FarmManager
 {
     public List<Monster> farmMonsters;
     public MonsterStorage monsterStorage;
-    
-    private static FarmManager instance;
+    public PlotHandler plotHandler;
 
-    public static FarmManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                
-                instance = new FarmManager();
-            }
-
-            return instance;
-        }
-    }
-    
-    public FarmManager()
+    public FarmManager(int _plotsize, MonsterPlantPlot[] _monsterPlantPlots, FoodPlantPlot[] _foodPlantPlots)
     {
         farmMonsters = new List<Monster>();
         monsterStorage = new MonsterStorage();
-        //Debug.Log("Created farm manager");
+        plotHandler = new PlotHandler(4, _monsterPlantPlots, _foodPlantPlots);
     }
 
     public void PrintMonsterList()
