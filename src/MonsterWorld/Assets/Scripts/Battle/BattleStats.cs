@@ -55,4 +55,9 @@ public class BattleStats
 
         return damage;
     }
+
+    public string Describe()
+    {
+        return $"HP: {MonsterStats.MaxHP} Attack: {MonsterStats.Attack} Defense: {MonsterStats.Defense} Speed: {MonsterStats.Speed}";
+    }
 }

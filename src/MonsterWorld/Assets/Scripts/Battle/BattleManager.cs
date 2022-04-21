@@ -26,6 +26,11 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
+        
+    }
+
+    private void Awake()
+    {
         SetupUI();
         this.battleState = BattleState.Start;
     }

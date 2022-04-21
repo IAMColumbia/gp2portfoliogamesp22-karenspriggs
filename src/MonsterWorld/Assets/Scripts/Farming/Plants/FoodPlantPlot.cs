@@ -27,6 +27,7 @@ public class FoodPlantPlot : PlantPlot
             {
                 plantInPlot.plantEvo.Evolve();
                 UpdateSprite(plantInPlot);
+                CheckIfGrown();
             }
         }
     }
@@ -41,10 +42,15 @@ public class FoodPlantPlot : PlantPlot
     void UpdateSprite(FoodPlant fp)
     {
         this.spriteRenderer.sprite = fp.plantEvo.SetCurrentSprite();
-        
-        if (fp.plantEvo.hasGrown)
+    }
+
+    void CheckIfGrown()
+    {
+        if (plantInPlot.plantEvo.hasGrown)
         {
-            Player.Instance.playerInventory.AddFood(fp.food);
+            Player.Instance.playerInventory.AddFood(plantInPlot.food);
+            this.spriteRenderer.sprite = null;
+            this.plotStatus = PlotStatus.Empty;
         }
     }
 }

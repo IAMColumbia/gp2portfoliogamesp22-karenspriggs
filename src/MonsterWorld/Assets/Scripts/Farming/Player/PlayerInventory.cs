@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInventory 
+public class PlayerInventory
 {
     private List<Monster> playerMonsters;
     private List<Food> playerFood;
@@ -17,6 +17,8 @@ public class PlayerInventory
         maxTeamSize = 3;
 
         AddMonster(MonsterFactory.Instance.GetMon("Advodoggo"));
+        AddMonster(MonsterFactory.Instance.GetMon("SunflowerLion"));
+        AddMonster(MonsterFactory.Instance.GetMon("Raccorn"));
     }
 
     public void AddMonster(Monster m)
@@ -42,6 +44,16 @@ public class PlayerInventory
     public void AddFoodPlant(FoodPlant fp)
     {
         this.playerFoodPlants.Add(fp);
+    }
+
+    public string PrintMonsterInfo(int index)
+    {
+        return playerMonsters[index].battleStats.Describe();
+    }
+
+    public string PrintMonsterName(int index)
+    {
+        return playerMonsters[index].battleStats.Name; 
     }
 
     public string PrintMonPlantInventory()

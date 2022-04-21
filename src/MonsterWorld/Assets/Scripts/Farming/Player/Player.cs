@@ -15,11 +15,11 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerMovement = new PlayerMovement(transform.position, movementIncrement);
-        playerInventory = new PlayerInventory();
     }
 
     private void Awake()
     {
+        playerInventory = new PlayerInventory();
         Instance = this;
     }
 

@@ -28,6 +28,7 @@ public class MonsterPlantPlot : PlantPlot
             {
                 plantInPlot.plantEvo.Evolve();
                 UpdateSprite(plantInPlot);
+                CheckIfGrown();
             }
         }    
     }
@@ -46,6 +47,16 @@ public class MonsterPlantPlot : PlantPlot
         if (mp.plantEvo.hasGrown)
         {
             Player.Instance.playerInventory.AddMonster(mp.monster);
+        }
+    }
+
+    void CheckIfGrown()
+    {
+        if (plantInPlot.plantEvo.hasGrown)
+        {
+            Player.Instance.playerInventory.AddMonster(plantInPlot.monster);
+            this.spriteRenderer.sprite = null;
+            this.plotStatus = PlotStatus.Empty;
         }
     }
 }
