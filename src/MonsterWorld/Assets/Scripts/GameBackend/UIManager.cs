@@ -14,7 +14,7 @@ public class UIManager
         this.FoodPlantShopUIPanel = foodplantUI;
 
         this.MonPlantShopUIPanel.gameObject.SetActive(false);
-        this.FoodPlantShopUIPanel.gameObject.SetActive(false);
+        //this.FoodPlantShopUIPanel.gameObject.SetActive(false);
     }
 
     public void EnterFoodShop()

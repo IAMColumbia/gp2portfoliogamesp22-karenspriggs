@@ -59,6 +59,7 @@ public class PlotHandler
             if (foodPlantPlots[i].plotStatus == PlotStatus.Empty)
             {
                 foodPlantPlots[i].SetFoodPlant(newPlant);
+                return;
             }
         }
     }
@@ -70,6 +71,7 @@ public class PlotHandler
             if (monsterPlantPlots[i].plotStatus == PlotStatus.Empty)
             {
                 monsterPlantPlots[i].SetMonsterPlant(newPlant);
+                return;
             }
         }
     }

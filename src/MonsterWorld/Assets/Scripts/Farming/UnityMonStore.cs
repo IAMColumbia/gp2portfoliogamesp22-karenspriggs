@@ -7,6 +7,7 @@ public class UnityMonStore : MonoBehaviour
 {
     MonPlantStore monPlantStore;
     public Text playerInventoryList;
+    public GameObject Menu;
 
     void Start()
     {
@@ -35,6 +36,11 @@ public class UnityMonStore : MonoBehaviour
     {
         monPlantStore.SellMonPlant("Raccorn");
         UpdateText();
+    }
+
+    public void HideSelf()
+    {
+        Menu.SetActive(false);
     }
 
     void UpdateText()

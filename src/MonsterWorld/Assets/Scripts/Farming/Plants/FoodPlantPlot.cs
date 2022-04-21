@@ -10,7 +10,7 @@ public class FoodPlantPlot : PlantPlot
     protected override void Start()
     {
         base.Start();
-        SetFoodPlant(FoodPlantFactory.Instance.GetFoodPlant("HP Berry"));
+        //SetFoodPlant(FoodPlantFactory.Instance.GetFoodPlant("HP Berry"));
 
         if (plotStatus == PlotStatus.Occupied)
         {

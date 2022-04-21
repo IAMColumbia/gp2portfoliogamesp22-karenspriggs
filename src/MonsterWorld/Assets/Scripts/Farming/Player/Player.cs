@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public static Player Instance;
 
     public int movementIncrement;
+    public bool canMove;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +21,17 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         playerInventory = new PlayerInventory();
+        canMove = true;
         Instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckInput();
+        if (canMove)
+        {
+            CheckInput();
+        }
     }
 
     void CheckInput()

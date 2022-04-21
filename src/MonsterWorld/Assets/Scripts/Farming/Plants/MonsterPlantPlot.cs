@@ -11,7 +11,7 @@ public class MonsterPlantPlot : PlantPlot
     {
         base.Start();
 
-        SetMonsterPlant(MonPlantFactory.Instance.GetMonPlant("SunflowerLion"));
+        //SetMonsterPlant(MonPlantFactory.Instance.GetMonPlant("SunflowerLion"));
 
         if (plotStatus == PlotStatus.Occupied)
         {

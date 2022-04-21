@@ -11,10 +11,17 @@ public class FoodPlantStore
         this.foodPlantsForSale = FoodPlantFactory.Instance.foodPlantDictionary;
     }
 
-    public void SellFoodPlant(string key)
+    public string SellFoodPlant(string key)
     {
         // Bruh idk
-        Player.Instance.playerInventory.AddFoodPlant(foodPlantsForSale[key]);
+        
+        if (GameManager.SharedInstance.farmManager.plotHandler.CanBuyFoodSeed())
+        {
+            GameManager.SharedInstance.farmManager.plotHandler.FillFirstFoodPlot(foodPlantsForSale[key]);
+            return $"Bought a {key} seed";
+        }
+
+        return "Could not buy another plant, your food plots are full";
     }
 
     string PrintStock()

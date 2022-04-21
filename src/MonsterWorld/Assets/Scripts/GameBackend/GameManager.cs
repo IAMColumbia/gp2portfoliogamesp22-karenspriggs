@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager SharedInstance;
+
     public List<GameObject> battleObjects;
     public List<GameObject> farmingObjects;
     public GameObject monPlantShopUI;
@@ -15,7 +17,7 @@ public class GameManager : MonoBehaviour
     public int plotSize;
 
     BattleManager battleManager;
-    FarmManager farmManager;
+    public FarmManager farmManager;
     GameStateManager gameStateManager;
     UIManager uiManager;
 
@@ -30,6 +32,8 @@ public class GameManager : MonoBehaviour
         farmManager = new FarmManager(plotSize, monsterPlantPlots, foodPlantPlots);
 
         uiManager = new UIManager(monPlantShopUI, foodPlantShopUI);
+
+        SharedInstance = this;
     }
 
     private void Update()
@@ -52,13 +56,13 @@ public class GameManager : MonoBehaviour
 
     public void EnterMonShop()
     {
+        Player.Instance.canMove = false;
         uiManager.EnterMonShop();
-        uiManager.ExitFoodShop();
     }
 
     public void EnterFoodShop()
     {
+        Player.Instance.canMove = false;
         uiManager.EnterFoodShop();
-        uiManager.ExitMonShop();
     }
 }
