@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public FoodPlantPlot[] foodPlantPlots;
     public int plotSize;
 
-    BattleManager battleManager;
+    public BattleManager battleManager;
     public FarmManager farmManager;
     GameStateManager gameStateManager;
     UIManager uiManager;
@@ -47,6 +47,7 @@ public class GameManager : MonoBehaviour
     public void TurnOnBattleState()
     {
         gameStateManager.SetBattleState();
+        battleManager.SetMonster();
     }
 
     public void TurnOnFarmState()

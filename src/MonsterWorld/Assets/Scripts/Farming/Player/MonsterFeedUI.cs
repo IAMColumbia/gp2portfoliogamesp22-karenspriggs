@@ -22,6 +22,7 @@ public class MonsterFeedUI : MonoBehaviour
     public void FeedHPBerry()
     {
         monsterSelected.FeedMonster(FoodFactory.Instance.GetFood("HP Berry"));
+        monsterSelected.SetMaxHP();
         UpdateStatsText();
     }
 

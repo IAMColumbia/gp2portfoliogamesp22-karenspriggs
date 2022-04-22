@@ -19,6 +19,9 @@ public class BattleUIManager : MonoBehaviour
 
     public Text enemyMoveText;
 
+    public Image playerSprite;
+    public Image enemySprite;
+
     public BattleManager battleManager;
 
     // Start is called before the first frame update
@@ -41,24 +44,27 @@ public class BattleUIManager : MonoBehaviour
 
     public void SetupUI()
     {
-        this.playerMonName.text = battleManager.playerMonster.monster.battleStats.Name;
+        this.playerMonName.text = battleManager.playerBattler.monsterBattler.battleStats.Name;
         this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
 
-        this.playerMonHP.text = $"{battleManager.playerMonster.monster.battleStats.MonsterStats.CurrentHP} / {battleManager.playerMonster.monster.battleStats.MonsterStats.MaxHP}";
+        this.playerMonHP.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
         this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
 
-        this.playerMonType.text = $"{battleManager.playerMonster.monster.battleStats.MonsterBattleType.Name} Type";
+        this.playerMonType.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterBattleType.Name} Type";
         this.enemyMonType.text = $"{battleManager.enemyMonster.battleStats.MonsterBattleType.Name} Type";
+
+        Debug.Log(battleManager.playerBattler.monsterBattler.monsterSprite);
+        this.playerSprite.sprite = battleManager.playerBattler.monsterBattler.monsterSprite;
 
         SetUpButtons();
     }
 
     public void SetUpButtons()
     {
-        move1ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move1.Name;
-        move2ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move2.Name;
-        move3ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move3.Name;
-        move4ButtonText.text = battleManager.playerMonster.monster.battleStats.MonsterMoveSet.Move4.Name;
+        move1ButtonText.text = battleManager.playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1.Name;
+        move2ButtonText.text = battleManager.playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2.Name;
+        move3ButtonText.text = battleManager.playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3.Name;
+        move4ButtonText.text = battleManager.playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4.Name;
     }
 
     public void UseMove(int damage, int newHP, string moveName)
@@ -75,7 +81,20 @@ public class BattleUIManager : MonoBehaviour
     public void ResetHP()
     {
         this.battleManager.ResetHPForTesting();
-        this.playerMonHP.text = $"{battleManager.playerMonster.monster.battleStats.MonsterStats.CurrentHP} / {battleManager.playerMonster.monster.battleStats.MonsterStats.MaxHP}";
+        this.playerMonHP.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
         this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
+    }
+
+    public void SwitchMon()
+    {
+        if (battleManager.playerMonIndex+1 < Player.Instance.playerInventory.maxTeamSize)
+        {
+            battleManager.playerMonIndex++;
+        } else
+        {
+            battleManager.playerMonIndex = 0;
+        }
+
+        battleManager.SetMonster();
     }
 }

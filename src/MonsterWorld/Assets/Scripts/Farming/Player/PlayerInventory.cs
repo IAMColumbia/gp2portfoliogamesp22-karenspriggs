@@ -9,7 +9,7 @@ public class PlayerInventory
     private List<MonsterPlant> playerMonPlants;
     private List<FoodPlant> playerFoodPlants;
 
-    private int maxTeamSize;
+    public int maxTeamSize;
 
     public PlayerInventory()
     {

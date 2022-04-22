@@ -8,6 +8,6 @@ public class Battler
 
     public Battler()
     {
-
+        monsterBattler = MonsterFactory.Instance.GetMon("SunflowerLion");
     }
 }

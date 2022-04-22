@@ -28,10 +28,10 @@ public class MonsterFactory
 
     void FillDictionary()
     {
-        monDictionary.Add("SunflowerLion", new Monster("SunflowerLion"));
-        monDictionary.Add("Advodoggo", new Monster("Advodoggo"));
-        monDictionary.Add("Strawbunny", new Monster("Strawbunny"));
-        monDictionary.Add("Raccorn", new Monster("Raccorn"));
+        monDictionary.Add("SunflowerLion", new Monster("SunflowerLion", "Sprites/littlestinkylion"));
+        monDictionary.Add("Advodoggo", new Monster("Advodoggo", "Sprites/advodogo"));
+        monDictionary.Add("Strawbunny", new Monster("Strawbunny", "Sprites/strawbunny"));
+        monDictionary.Add("Raccorn", new Monster("Raccorn", "Sprites/raccorn"));
     }
 
     public Monster GetMon(string value)
