@@ -1,0 +1,14 @@
+Additions/ New Features:
+- Monster storage for containing monsters that have grown
+- Four plots for both food and monster seeds that autofill when seeds are bought
+- Food and monster seed stores
+- Ability for player to look at their team and feed monsters berries to raise stats
+- Player monster in the battle screen actually correlates to whats in their team 
+- Player can cycle between monsters on their team in the battle screen
+- Win screen when player makes enemy monster go down to 0
+- Everything is now one scene
+
+Features for Next Time:
+- More sprites for props to make the farm more interesting
+- Instead of UI buttons, menus for shops come up when the player hits a button close to something in the scene
+- Abstract scripts out more for better SOLID principle following

@@ -11,12 +11,17 @@ public class MonsterStorage
         monstersInStorage = new List<Monster>();
     }
 
-    // Method to add a monster to player inventory
-    // Method to remove monster from player inventory and then add to storage\
-
     public void AddMonsterToStorage(Monster m)
     {
         monstersInStorage.Add(m);
+    }
+
+    public void RemoveMonsterFromStorage(int index)
+    {
+        if (index < monstersInStorage.Count)
+        {
+            monstersInStorage.Remove(monstersInStorage[index]);
+        }
     }
 
     public string ListMonstersInStorage()
@@ -31,11 +36,39 @@ public class MonsterStorage
         return list;
     }
 
-    void AddMonsterToPlayerTeam(Monster m)
+    public string PrintMonsterInfo(int index)
+    {
+        if (index < monstersInStorage.Count)
+        {
+            return monstersInStorage[index].battleStats.Describe();
+        }
+
+        return "";
+    }
+
+    public string PrintMonsterName(int index)
+    {
+        if (index < monstersInStorage.Count)
+        {
+            return monstersInStorage[index].battleStats.Name;
+        }
+
+        return "";
+    }
+
+    public Monster ReturnMonsterStorage(int index)
+    {
+        return monstersInStorage[index];
+    }
+
+    public string AddMonsterToPlayerTeam(Monster m)
     {
         if (Player.Instance.playerInventory.CanAddMonster())
         {
             Player.Instance.playerInventory.AddMonster(m);
+            return $"{m.battleStats.Name} added to team";
         }
+
+        return "You need to clear up a space on your team first";
     }
 }

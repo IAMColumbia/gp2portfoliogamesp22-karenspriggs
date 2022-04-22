@@ -39,7 +39,10 @@ public class BattleManager : MonoBehaviour
 
     public void SetMonster()
     {
-        playerBattler.monsterBattler = Player.Instance.playerInventory.GetBattler(playerMonIndex);
+        if (playerMonIndex < Player.Instance.playerInventory.teamSize)
+        {
+            playerBattler.monsterBattler = Player.Instance.playerInventory.GetBattler(playerMonIndex);
+        }
         SetupUI();
     }
 
@@ -52,6 +55,7 @@ public class BattleManager : MonoBehaviour
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
+            battleUI.ShowWin();
         }
 
         battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1.Name);
@@ -66,6 +70,7 @@ public class BattleManager : MonoBehaviour
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
+            battleUI.ShowWin();
         }
 
         battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2.Name);
@@ -80,6 +85,7 @@ public class BattleManager : MonoBehaviour
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
+            battleUI.ShowWin();
         }
 
         battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3.Name);
@@ -94,6 +100,7 @@ public class BattleManager : MonoBehaviour
         if (newEnemyHP < 0)
         {
             newEnemyHP = 0;
+            battleUI.ShowWin();
         }
 
         battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4.Name);
@@ -132,5 +139,6 @@ public class BattleManager : MonoBehaviour
     {
         playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP = playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP;
         enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
+        //SetupUI();
     }
 }

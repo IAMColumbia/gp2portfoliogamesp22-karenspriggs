@@ -17,25 +17,25 @@ public class UnityMonStore : MonoBehaviour
     public void BuySunflowerLion()
     {
         monPlantStore.SellMonPlant("SunflowerLion");
-        UpdateText();
+        //UpdateText();
     }
 
     public void BuyAdvodoggo()
     {
         monPlantStore.SellMonPlant("Advodoggo");
-        UpdateText();
+        //UpdateText();
     }
 
     public void BuyStrawbunny()
     {
         monPlantStore.SellMonPlant("Strawbunny");
-        UpdateText();
+        //UpdateText();
     }
 
     public void BuyRaccorn()
     {
         monPlantStore.SellMonPlant("Raccorn");
-        UpdateText();
+        //UpdateText();
     }
 
     public void HideSelf()
@@ -43,8 +43,8 @@ public class UnityMonStore : MonoBehaviour
         Menu.SetActive(false);
     }
 
-    void UpdateText()
-    {
-        playerInventoryList.text = Player.Instance.playerInventory.PrintMonPlantInventory();
-    }
+    //void UpdateText()
+    //{
+    //    playerInventoryList.text = Player.Instance.playerInventory.PrintMonPlantInventory();
+    //}
 }

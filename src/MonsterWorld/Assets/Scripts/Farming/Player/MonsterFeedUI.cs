@@ -14,6 +14,8 @@ public class MonsterFeedUI : MonoBehaviour
     public Text defBerryText;
     public Text spdBerryText;
 
+    public Image monsterSprite;
+
     private void Start()
     {
         
@@ -48,6 +50,8 @@ public class MonsterFeedUI : MonoBehaviour
     {
         nameText.text = monsterSelected.battleStats.Name;
         statsText.text = monsterSelected.battleStats.Describe();
+
+        monsterSprite.sprite = monsterSelected.monsterSprite;
 
         hpBerryText.text = $"You have {Player.Instance.playerInventory.GetAmountOfFood("HP Berry")}";
         atkBerryText.text = $"You have {Player.Instance.playerInventory.GetAmountOfFood("ATK Berry")}";

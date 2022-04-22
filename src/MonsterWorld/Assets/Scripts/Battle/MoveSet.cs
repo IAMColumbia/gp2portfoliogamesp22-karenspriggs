@@ -28,9 +28,17 @@ public class MoveSet
 
     public MoveSet()
     {
-        move1 = new Move("Veggie Bite", 4, BattleTypeDatabase.VeggieType);
-        move2 = new Move("Fruit Slash", 4, BattleTypeDatabase.FruitType);
-        move3 = new Move("Flower Bite", 4, BattleTypeDatabase.FlowerType);
-        move4 = new Move("Flower Slash", 2, BattleTypeDatabase.FlowerType);
+        move1 = MoveFactory.Instance.GetMove("VeggieBite");
+        move2 = MoveFactory.Instance.GetMove("FruitSlash");
+        move3 = MoveFactory.Instance.GetMove("FlowerBite");
+        move4 = MoveFactory.Instance.GetMove("FlowerSlash");
+    }
+
+    public MoveSet(string _move1key, string _move2key, string _move3key, string _move4key)
+    {
+        move1 = MoveFactory.Instance.GetMove(_move1key);
+        move2 = MoveFactory.Instance.GetMove(_move2key);
+        move3 = MoveFactory.Instance.GetMove(_move3key);
+        move4 = MoveFactory.Instance.GetMove(_move4key);
     }
 }

@@ -23,18 +23,7 @@ public class BattleUIManager : MonoBehaviour
     public Image enemySprite;
 
     public BattleManager battleManager;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject winScreen;
 
     public void ConnectBattleManager(BattleManager battleManager)
     {
@@ -44,6 +33,8 @@ public class BattleUIManager : MonoBehaviour
 
     public void SetupUI()
     {
+        winScreen.gameObject.SetActive(false);
+
         this.playerMonName.text = battleManager.playerBattler.monsterBattler.battleStats.Name;
         this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
 
@@ -85,9 +76,20 @@ public class BattleUIManager : MonoBehaviour
         this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
     }
 
+    public void ShowWin()
+    {
+        winScreen.gameObject.SetActive(true);
+    }
+
+    public void HideWin()
+    {
+        winScreen.gameObject.SetActive(false);
+        battleManager.ResetHPForTesting();
+    }
+
     public void SwitchMon()
     {
-        if (battleManager.playerMonIndex+1 < Player.Instance.playerInventory.maxTeamSize)
+        if (battleManager.playerMonIndex+1 < Player.Instance.playerInventory.teamSize)
         {
             battleManager.playerMonIndex++;
         } else

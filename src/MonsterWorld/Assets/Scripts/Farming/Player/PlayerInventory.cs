@@ -6,8 +6,7 @@ public class PlayerInventory
 {
     private List<Monster> playerMonsters;
     private List<Food> playerFood;
-    private List<MonsterPlant> playerMonPlants;
-    private List<FoodPlant> playerFoodPlants;
+    public int teamSize;
 
     public int maxTeamSize;
 
@@ -22,9 +21,12 @@ public class PlayerInventory
         AddMonster(MonsterFactory.Instance.GetMon("Raccorn"));
     }
 
+    // Later I will have to abstract this out to monsterinventory 
+
     public void AddMonster(Monster m)
     {
         this.playerMonsters.Add(m);
+        teamSize++;
     }
 
     public Monster ReturnMonster(int index)
@@ -42,50 +44,33 @@ public class PlayerInventory
         this.playerFood.Add(f);
     }
 
-    public void AddMonPlant(MonsterPlant mp)
-    {
-        this.playerMonPlants.Add(mp);
-    }
-
-    public void AddFoodPlant(FoodPlant fp)
-    {
-        this.playerFoodPlants.Add(fp);
-    }
-
     public string PrintMonsterInfo(int index)
     {
-        return playerMonsters[index].battleStats.Describe();
+        if (index < playerMonsters.Count)
+        {
+            return playerMonsters[index].battleStats.Describe();
+        }
+
+        return "";
     }
 
     public string PrintMonsterName(int index)
     {
-        return playerMonsters[index].battleStats.Name; 
-    }
-
-    public string PrintMonPlantInventory()
-    {
-        string message = "";
-
-        foreach (MonsterPlant mp in playerMonPlants)
+        if (index < playerMonsters.Count)
         {
-            message += mp.plantMonKey;
-            message += "\n";
+            return playerMonsters[index].battleStats.Name;
         }
 
-        return message;
+        return "";
     }
 
-    public string PrintFoodPlantInventory()
+    public void RemoveMonster(int index)
     {
-        string message = "";
-
-        foreach (FoodPlant fp in playerFoodPlants)
+        if (index < playerMonsters.Count)
         {
-            message += fp.foodKey;
-            message += "\n";
+            playerMonsters.Remove(playerMonsters[index]);
+            teamSize--;
         }
-
-        return message;
     }
 
     public Monster GetBattler(int index)
