@@ -20,7 +20,7 @@ public class Food
         this.FoodSprite = Resources.Load<Sprite>(_spritepath);
     }
 
-    void Feed(Stats monStats)
+    public void Feed(Stats monStats)
     {
         if (Stat == 0)
         {

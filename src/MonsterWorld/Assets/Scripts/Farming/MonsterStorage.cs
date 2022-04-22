@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterStorage
 {
-    public List<Monster> monstersInStorage;
+    private List<Monster> monstersInStorage;
 
     public MonsterStorage()
     {
@@ -12,7 +12,24 @@ public class MonsterStorage
     }
 
     // Method to add a monster to player inventory
-    // Method to remove monster from player inventory and then add to storage
+    // Method to remove monster from player inventory and then add to storage\
+
+    public void AddMonsterToStorage(Monster m)
+    {
+        monstersInStorage.Add(m);
+    }
+
+    public string ListMonstersInStorage()
+    {
+        string list = "";
+
+        foreach (Monster m in monstersInStorage)
+        {
+            list += $"{m.battleStats.Name}\n";
+        }
+
+        return list;
+    }
 
     void AddMonsterToPlayerTeam(Monster m)
     {

@@ -11,7 +11,7 @@ public class Stats
     private int defense;
     private int speed;
 
-    public int MaxHP { get { return maxHP; } set { MaxHP = value; } }
+    public int MaxHP { get { return maxHP; } set { maxHP = value; } }
     public int CurrentHP
     {
         get { return currentHP; }

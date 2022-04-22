@@ -43,18 +43,20 @@ public class MonsterPlantPlot : PlantPlot
     void UpdateSprite(MonsterPlant mp)
     {
         spriteRenderer.sprite = mp.plantEvo.SetCurrentSprite();
-
-        if (mp.plantEvo.hasGrown)
-        {
-            Player.Instance.playerInventory.AddMonster(mp.monster);
-        }
     }
 
     void CheckIfGrown()
     {
         if (plantInPlot.plantEvo.hasGrown)
         {
-            Player.Instance.playerInventory.AddMonster(plantInPlot.monster);
+            if (Player.Instance.playerInventory.CanAddMonster())
+            {
+                Player.Instance.playerInventory.AddMonster(plantInPlot.monster);
+            } else
+            {
+                GameManager.SharedInstance.farmManager.monsterStorage.AddMonsterToStorage(plantInPlot.monster);
+            }
+
             this.spriteRenderer.sprite = null;
             this.plotStatus = PlotStatus.Empty;
         }

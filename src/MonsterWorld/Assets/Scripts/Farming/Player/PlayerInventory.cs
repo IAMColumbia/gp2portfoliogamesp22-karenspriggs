@@ -8,6 +8,7 @@ public class PlayerInventory
     private List<Food> playerFood;
     private List<MonsterPlant> playerMonPlants;
     private List<FoodPlant> playerFoodPlants;
+
     private int maxTeamSize;
 
     public PlayerInventory()
@@ -24,6 +25,11 @@ public class PlayerInventory
     public void AddMonster(Monster m)
     {
         this.playerMonsters.Add(m);
+    }
+
+    public Monster ReturnMonster(int index)
+    {
+        return playerMonsters[index];
     }
 
     public bool CanAddMonster()
@@ -85,5 +91,35 @@ public class PlayerInventory
     public Monster GetBattler(int index)
     {
         return playerMonsters[index];
+    }
+
+    public int GetAmountOfFood(string key)
+    {
+        int amount = 0;
+
+        foreach(Food f in playerFood)
+        {
+            if (key == f.Name)
+            {
+                amount++;
+            }
+        }
+
+        return amount;
+    }
+
+    public void RemoveOneFood(string key)
+    {
+        int index = 0;
+
+        for (int i = 0; i < playerFood.Count; i++)
+        {
+            if (playerFood[i].Name == key)
+            {
+                index = i;
+            }
+        }
+
+        playerFood.Remove(playerFood[index]);
     }
 }
