@@ -5,6 +5,8 @@ using UnityEngine;
 public class MonsterPlantPlot : PlantPlot
 {
     public MonsterPlant plantInPlot;
+    
+    bool triggerActive = false;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -22,7 +24,7 @@ public class MonsterPlantPlot : PlantPlot
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && triggerActive)
         {
             if (plotStatus == PlotStatus.Occupied)
             {
@@ -31,6 +33,17 @@ public class MonsterPlantPlot : PlantPlot
                 CheckIfGrown();
             }
         }    
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Player in trigger");
+        triggerActive = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerActive = false;
     }
 
     public void SetMonsterPlant(MonsterPlant mp)
@@ -57,7 +70,7 @@ public class MonsterPlantPlot : PlantPlot
                 GameManager.SharedInstance.farmManager.monsterStorage.AddMonsterToStorage(plantInPlot.monster);
             }
 
-            this.spriteRenderer.sprite = null;
+            this.spriteRenderer.sprite = emptyPlotSprite;
             this.plotStatus = PlotStatus.Empty;
         }
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class FoodPlantPlot : PlantPlot
 {
     public FoodPlant plantInPlot;
+    bool triggerActive = false;
 
     // Start is called before the first frame update
     protected override void Start()
@@ -21,7 +22,7 @@ public class FoodPlantPlot : PlantPlot
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && triggerActive)
         {
             if (plotStatus == PlotStatus.Occupied)
             {
@@ -30,6 +31,17 @@ public class FoodPlantPlot : PlantPlot
                 CheckIfGrown();
             }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Player in trigger");
+        triggerActive = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerActive = false;
     }
 
     public void SetFoodPlant(FoodPlant fp)
@@ -49,7 +61,7 @@ public class FoodPlantPlot : PlantPlot
         if (plantInPlot.plantEvo.hasGrown)
         {
             Player.Instance.playerInventory.AddFood(plantInPlot.food);
-            this.spriteRenderer.sprite = null;
+            this.spriteRenderer.sprite = emptyPlotSprite;
             this.plotStatus = PlotStatus.Empty;
         }
     }

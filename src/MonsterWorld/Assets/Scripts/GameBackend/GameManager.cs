@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public GameObject monPlantShopUI;
     public GameObject foodPlantShopUI;
 
+    public UnityMonStore monsterStore;
+    public UnityFoodStore foodStore;
+
     public MonsterPlantPlot[] monsterPlantPlots;
     public FoodPlantPlot[] foodPlantPlots;
     public int plotSize;
@@ -31,7 +34,7 @@ public class GameManager : MonoBehaviour
 
         farmManager = new FarmManager(plotSize, monsterPlantPlots, foodPlantPlots);
 
-        uiManager = new UIManager(monPlantShopUI, foodPlantShopUI);
+        uiManager = new UIManager(monsterStore, foodStore);
 
         SharedInstance = this;
     }

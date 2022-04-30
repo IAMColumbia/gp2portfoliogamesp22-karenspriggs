@@ -64,4 +64,6 @@ public class Player : MonoBehaviour
         //Debug.Log(playerMovement.position);
         this.transform.position = playerMovement.position;
     }
+
+    
 }

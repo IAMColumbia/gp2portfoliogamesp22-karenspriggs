@@ -9,9 +9,30 @@ public class UnityMonStore : MonoBehaviour
     public Text playerInventoryList;
     public GameObject Menu;
 
+    bool triggerActive = false;
+    bool beingShown = false;
+
     void Start()
     {
         monPlantStore = new MonPlantStore();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        triggerActive = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerActive = false;
+    }
+
+    private void Update()
+    {
+        if (triggerActive && !beingShown && Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowSelf();
+        }
     }
 
     public void BuySunflowerLion()
@@ -38,13 +59,17 @@ public class UnityMonStore : MonoBehaviour
         //UpdateText();
     }
 
-    public void HideSelf()
+    public void ShowSelf()
     {
-        Menu.SetActive(false);
+        Player.Instance.canMove = false;
+        Menu.SetActive(true);
+        beingShown = true;
     }
 
-    //void UpdateText()
-    //{
-    //    playerInventoryList.text = Player.Instance.playerInventory.PrintMonPlantInventory();
-    //}
+    public void HideSelf()
+    {
+        Player.Instance.canMove = true;
+        Menu.SetActive(false);
+        beingShown = false;
+    }
 }

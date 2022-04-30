@@ -9,9 +9,30 @@ public class UnityFoodStore : MonoBehaviour
     public Text resultText;
     public GameObject Menu;
 
+    bool triggerActive = false;
+    bool beingShown = false;
+
     void Start()
     {
         foodPlantStore = new FoodPlantStore();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        triggerActive = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerActive = false;
+    }
+
+    private void Update()
+    {
+        if (triggerActive && !beingShown && Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowSelf();
+        }
     }
 
     // Connect to UI
@@ -34,6 +55,11 @@ public class UnityFoodStore : MonoBehaviour
     public void BuySPDBerry()
     {
         resultText.text = foodPlantStore.SellFoodPlant("SPD Berry");
+    }
+
+    public void ShowSelf()
+    {
+        Menu.SetActive(true);
     }
 
     public void HideSelf()
