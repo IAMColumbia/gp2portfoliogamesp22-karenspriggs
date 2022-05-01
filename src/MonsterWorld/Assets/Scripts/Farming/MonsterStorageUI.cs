@@ -23,6 +23,8 @@ public class MonsterStorageUI : MonoBehaviour
     public Text monster3StatsStorage;
     public Text monster4StatsStorage;
 
+    public Text interactionText;
+
     public Text resultsText;
 
     public GameObject storageUI;
@@ -31,12 +33,20 @@ public class MonsterStorageUI : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        triggerActive = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            interactionText.gameObject.SetActive(true);
+            triggerActive = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggerActive = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            triggerActive = false;
+            interactionText.gameObject.SetActive(false);
+        }
     }
 
     private void Update()

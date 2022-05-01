@@ -35,13 +35,18 @@ public class FoodPlantPlot : PlantPlot
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Player in trigger");
-        triggerActive = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            triggerActive = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggerActive = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            triggerActive = false;
+        }
     }
 
     public void SetFoodPlant(FoodPlant fp)

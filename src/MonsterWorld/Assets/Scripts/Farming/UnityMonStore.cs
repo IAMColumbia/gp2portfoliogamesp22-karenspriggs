@@ -9,6 +9,8 @@ public class UnityMonStore : MonoBehaviour
     public Text playerInventoryList;
     public GameObject Menu;
 
+    public Text interactionText;
+
     bool triggerActive = false;
     bool beingShown = false;
 
@@ -19,12 +21,20 @@ public class UnityMonStore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        triggerActive = true;
+        if (collision.gameObject.tag == "Player")
+        {
+            interactionText.gameObject.SetActive(true);
+            triggerActive = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggerActive = false;
+        if (collision.gameObject.tag == "Player")
+        {
+            interactionText.gameObject.SetActive(false);
+            triggerActive = false;
+        }
     }
 
     private void Update()
