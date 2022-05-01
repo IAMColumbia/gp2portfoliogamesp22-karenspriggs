@@ -2229,6 +2229,7 @@ GameObject:
   - component: {fileID: 223937205}
   - component: {fileID: 223937204}
   - component: {fileID: 223937206}
+  - component: {fileID: 223937207}
   m_Layer: 0
   m_Name: fencetop (1)
   m_TagString: Untagged
@@ -2295,7 +2296,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223937203}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.57009995, y: -5.436776, z: 316.1126}
+  m_LocalPosition: {x: -0.57009995, y: -5.436776, z: 10}
   m_LocalScale: {x: 1.3605187, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077025828}
@@ -2327,6 +2328,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.8149991}
   m_EdgeRadius: 0
+--- !u!50 &223937207
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223937203}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &231995079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,7 +2588,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235578386}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3367,7 +3389,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 333802202}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -3379,7 +3401,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &347735434
 GameObject:
   m_ObjectHideFlags: 0
@@ -4117,6 +4139,7 @@ GameObject:
   - component: {fileID: 453169353}
   - component: {fileID: 453169355}
   - component: {fileID: 453169354}
+  - component: {fileID: 453169356}
   m_Layer: 0
   m_Name: fenceside1
   m_TagString: Untagged
@@ -4132,7 +4155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453169352}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.8896508, y: -3.6124547, z: 316.1126}
+  m_LocalPosition: {x: -3.8896508, y: -3.6124547, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077025828}
@@ -4215,6 +4238,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &453169356
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453169352}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1001 &461119447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7234,7 +7278,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753634689}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -7246,7 +7290,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!1 &769856034
 GameObject:
   m_ObjectHideFlags: 0
@@ -7890,7 +7934,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4675561387936231582, guid: 75769f09b08cd964680c024b17e7e780, type: 3}
       propertyPath: m_Constraints
-      value: 7
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675561387936231582, guid: 75769f09b08cd964680c024b17e7e780, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75769f09b08cd964680c024b17e7e780, type: 3}
@@ -8709,6 +8757,7 @@ GameObject:
   - component: {fileID: 878337028}
   - component: {fileID: 878337030}
   - component: {fileID: 878337029}
+  - component: {fileID: 878337031}
   m_Layer: 0
   m_Name: fenceside
   m_TagString: Untagged
@@ -8724,7 +8773,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878337027}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.8880277, y: -3.7997768, z: 316.1126}
+  m_LocalPosition: {x: 2.8880277, y: -3.7997768, z: 10}
   m_LocalScale: {x: 1, y: 1.1252859, z: 1}
   m_Children: []
   m_Father: {fileID: 2077025828}
@@ -8807,6 +8856,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &878337031
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878337027}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &885867427
 GameObject:
   m_ObjectHideFlags: 0
@@ -15192,6 +15262,7 @@ GameObject:
   - component: {fileID: 1670812920}
   - component: {fileID: 1670812922}
   - component: {fileID: 1670812921}
+  - component: {fileID: 1670812923}
   m_Layer: 0
   m_Name: fenceside1 (1)
   m_TagString: Untagged
@@ -15207,7 +15278,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1670812919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.95, y: -3.97, z: 316.1126}
+  m_LocalPosition: {x: -3.95, y: -3.97, z: 10}
   m_LocalScale: {x: 1, y: -1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077025828}
@@ -15290,6 +15361,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1670812923
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670812919}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1672829310
 GameObject:
   m_ObjectHideFlags: 0
@@ -16302,6 +16394,7 @@ GameObject:
   - component: {fileID: 1831831457}
   - component: {fileID: 1831831456}
   - component: {fileID: 1831831458}
+  - component: {fileID: 1831831459}
   m_Layer: 0
   m_Name: fencetop
   m_TagString: Untagged
@@ -16368,7 +16461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831831455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.55, y: -2.1867766, z: 316.1126}
+  m_LocalPosition: {x: -0.55, y: -2.1867766, z: 10}
   m_LocalScale: {x: 1.3605187, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2077025828}
@@ -16400,6 +16493,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5, y: 0.8047214}
   m_EdgeRadius: 0
+--- !u!50 &1831831459
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831831455}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1846884315
 GameObject:
   m_ObjectHideFlags: 0
@@ -18489,7 +18603,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077025827}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.63064, y: 0.4043491, z: -306.0794}
+  m_LocalPosition: {x: 3.63064, y: 0.4043491, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1520027282}

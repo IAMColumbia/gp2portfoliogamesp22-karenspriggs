@@ -14,23 +14,23 @@ public class PlayerMovement
     }
 
     // Command Pattern
-    public void MoveUp(float Input)
+    public void MoveUp(float Input, Transform transform)
     {
-        position.y += movementIncrement * Input;
+        transform.Translate(Vector3.up * Input * movementIncrement);
     }
 
-    public void MoveDown(float Input)
+    public void MoveDown(float Input, Transform transform)
     {
-        position.y += movementIncrement * Input;
+        transform.Translate(Vector3.up * Input * movementIncrement);
     }
 
-    public void MoveLeft(float Input)
+    public void MoveLeft(float Input, Transform transform)
     {
-        position.x += movementIncrement * Input;
+        transform.Translate(Vector3.right * Input * movementIncrement);
     }
 
-    public void MoveRight(float Input)
+    public void MoveRight(float Input, Transform transform)
     {
-        position.x  += movementIncrement * Input;
+        transform.Translate(Vector3.right * Input * movementIncrement);
     }
 }

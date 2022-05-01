@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (canMove)
         {
@@ -43,26 +43,23 @@ public class Player : MonoBehaviour
         if (xInput > 0)
         {
             //Debug.Log("move right");
-            playerMovement.MoveRight(xInput);
+            playerMovement.MoveRight(xInput, this.transform);
         }
 
         if (xInput < 0)
         {
-            playerMovement.MoveLeft(xInput);
+            playerMovement.MoveLeft(xInput, this.transform);
         }
 
         if (yInput > 0)
         {
-            playerMovement.MoveUp(yInput);
+            playerMovement.MoveUp(yInput, this.transform);
         }
 
         if (yInput < 0)
         {
-            playerMovement.MoveDown(yInput);
+            playerMovement.MoveDown(yInput, this.transform);
         }
-
-        //Debug.Log(playerMovement.position);
-        this.transform.position = playerMovement.position;
     }
 
     
