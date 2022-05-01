@@ -49,62 +49,74 @@ public class BattleManager : MonoBehaviour
     // Methods for player using moves via buttons in UI
     public void UseMoveOne()
     {
-        int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1, enemyMonster.battleStats);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
-
-        if (newEnemyHP < 0)
+        if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            newEnemyHP = 0;
-            battleUI.ShowWin();
-        }
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1, enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
-        battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1.Name);
-        EnemyTurn();
+            if (newEnemyHP < 0)
+            {
+                newEnemyHP = 0;
+                battleUI.ShowWin();
+            }
+
+            battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1.Name);
+            EnemyTurn();
+        }
     }
 
     public void UseMoveTwo()
     {
-        int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2, enemyMonster.battleStats);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
-
-        if (newEnemyHP < 0)
+        if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            newEnemyHP = 0;
-            battleUI.ShowWin();
-        }
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2, enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
-        battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2.Name);
-        EnemyTurn();
+            if (newEnemyHP < 0)
+            {
+                newEnemyHP = 0;
+                battleUI.ShowWin();
+            }
+
+            battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2.Name);
+            EnemyTurn();
+        }
     }
 
     public void UseMoveThree()
     {
-        int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3, enemyMonster.battleStats);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
-
-        if (newEnemyHP < 0)
+        if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            newEnemyHP = 0;
-            battleUI.ShowWin();
-        }
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3, enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
-        battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3.Name);
-        EnemyTurn(); 
+            if (newEnemyHP < 0)
+            {
+                newEnemyHP = 0;
+                battleUI.ShowWin();
+            }
+
+            battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3.Name);
+            EnemyTurn();
+        }
     }
 
     public void UseMoveFour()
     {
-        int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4, enemyMonster.battleStats);
-        int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
-
-        if (newEnemyHP < 0)
+        if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            newEnemyHP = 0;
-            battleUI.ShowWin();
-        }
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4, enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
 
-        battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4.Name);
-        EnemyTurn();
+            if (newEnemyHP < 0)
+            {
+                newEnemyHP = 0;
+                battleUI.ShowWin();
+            }
+
+            battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4.Name);
+            EnemyTurn();
+        }
     }
 
     // Method to apply damage to other monster

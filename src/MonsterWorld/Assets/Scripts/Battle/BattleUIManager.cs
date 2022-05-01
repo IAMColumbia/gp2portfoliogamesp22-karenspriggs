@@ -34,10 +34,11 @@ public class BattleUIManager : MonoBehaviour
     public void SetupUI()
     {
         winScreen.gameObject.SetActive(false);
+        Debug.Log(battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP);
 
         this.playerMonName.text = battleManager.playerBattler.monsterBattler.battleStats.Name;
         this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
-
+        
         this.playerMonHP.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
         this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
 

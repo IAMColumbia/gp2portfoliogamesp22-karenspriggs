@@ -59,6 +59,7 @@ public class UnityFoodStore : MonoBehaviour
 
     public void ShowSelf()
     {
+        Player.Instance.canMove = false;
         Menu.SetActive(true);
     }
 

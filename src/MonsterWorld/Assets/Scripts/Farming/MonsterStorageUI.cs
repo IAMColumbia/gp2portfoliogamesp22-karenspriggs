@@ -27,6 +27,26 @@ public class MonsterStorageUI : MonoBehaviour
 
     public GameObject storageUI;
 
+    bool triggerActive = false;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        triggerActive = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        triggerActive = false;
+    }
+
+    private void Update()
+    {
+        if (triggerActive && Input.GetKeyDown(KeyCode.Space))
+        {
+            ShowSelf();
+        }
+    }
+
     public void UpdateUI()
     {
         UpdatePlayerTeamText();
@@ -128,12 +148,14 @@ public class MonsterStorageUI : MonoBehaviour
 
     public void ShowSelf()
     {
+        Player.Instance.canMove = false;
         storageUI.gameObject.SetActive(true);
         UpdateUI();
     }
 
     public void HideSelf()
     {
+        Player.Instance.canMove = true;
         storageUI.gameObject.SetActive(false);
     }
 }

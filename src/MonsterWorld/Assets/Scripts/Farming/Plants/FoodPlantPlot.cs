@@ -35,7 +35,7 @@ public class FoodPlantPlot : PlantPlot
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Player in trigger");
+        //Debug.Log("Player in trigger");
         triggerActive = true;
     }
 
