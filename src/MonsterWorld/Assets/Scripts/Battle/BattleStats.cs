@@ -11,13 +11,14 @@ public class BattleStats
     public MoveSet MonsterMoveSet
     {
         get { return monsterMoveSet; }
+        set { monsterMoveSet = value; }
     }
 
     string name;
 
-    public BattleType MonsterBattleType { get { return monsterBattleType; } }
+    public BattleType MonsterBattleType { get { return monsterBattleType; } set { monsterBattleType = value; } }
 
-    public Stats MonsterStats { get { return monsterStats; } }
+    public Stats MonsterStats { get { return monsterStats; } set { monsterStats = value; } }
 
     public string Name { get { return name; } set { name = value; }  }
 

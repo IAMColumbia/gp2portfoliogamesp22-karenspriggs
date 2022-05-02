@@ -9,6 +9,9 @@ public class Player : MonoBehaviour
 
     public static Player Instance;
 
+    public bool canBuyTomatoad;
+    public bool canBuyGiraffodil;
+
     public int movementIncrement;
     public bool canMove;
 
@@ -16,6 +19,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         playerMovement = new PlayerMovement(transform.position, movementIncrement);
+        canBuyTomatoad = false;
+        canBuyGiraffodil = false;
     }
 
     private void Awake()

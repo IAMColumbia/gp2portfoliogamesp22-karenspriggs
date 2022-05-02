@@ -16,8 +16,22 @@ public class Monster
 
     public Monster(string _statsKey, string _spritePath)
     {
-        this.battleStats = BattleStatsFactory.Instance.GetStats(_statsKey);
+        battleStats = new BattleStats();
+        CopyBattleStats(BattleStatsFactory.Instance.GetStats(_statsKey));
         this.monsterSprite = Resources.Load<Sprite>(_spritePath);
+    }
+
+    public void CopyBattleStats(BattleStats OGBattleStats)
+    {
+        this.battleStats.Name = OGBattleStats.Name;
+        this.battleStats.MonsterStats.MaxHP = OGBattleStats.MonsterStats.MaxHP;
+        this.battleStats.MonsterStats.Attack = OGBattleStats.MonsterStats.Attack;
+        this.battleStats.MonsterStats.Defense = OGBattleStats.MonsterStats.Defense;
+        this.battleStats.MonsterStats.Speed = OGBattleStats.MonsterStats.Speed;
+        this.battleStats.MonsterMoveSet = OGBattleStats.MonsterMoveSet;
+        this.battleStats.MonsterBattleType = OGBattleStats.MonsterBattleType;
+
+        SetMaxHP();
     }
 
     public void FeedMonster(Food f)

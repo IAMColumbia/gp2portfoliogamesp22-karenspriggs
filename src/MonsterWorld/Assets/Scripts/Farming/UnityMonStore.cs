@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class UnityMonStore : MonoBehaviour
 {
     MonPlantStore monPlantStore;
-    public Text playerInventoryList;
+
+    public Text resultsText;
     public GameObject Menu;
 
     public Text interactionText;
@@ -47,26 +48,49 @@ public class UnityMonStore : MonoBehaviour
 
     public void BuySunflowerLion()
     {
-        monPlantStore.SellMonPlant("SunflowerLion");
+        resultsText.text = monPlantStore.SellMonPlant("SunflowerLion");
         //UpdateText();
     }
 
     public void BuyAdvodoggo()
     {
-        monPlantStore.SellMonPlant("Advodoggo");
+        resultsText.text = monPlantStore.SellMonPlant("Advodoggo");
         //UpdateText();
     }
 
     public void BuyStrawbunny()
     {
-        monPlantStore.SellMonPlant("Strawbunny");
+        resultsText.text = monPlantStore.SellMonPlant("Strawbunny");
         //UpdateText();
     }
 
     public void BuyRaccorn()
     {
-        monPlantStore.SellMonPlant("Raccorn");
+        resultsText.text = monPlantStore.SellMonPlant("Raccorn");
         //UpdateText();
+    }
+
+    public void BuyTomatoad()
+    {
+        if (Player.Instance.canBuyTomatoad)
+        {
+            resultsText.text = monPlantStore.SellMonPlant("Tomatoad");
+        } else
+        {
+            resultsText.text = "You have not unlocked this monster yet";
+        }
+    }
+
+    public void BuyGiraffodil()
+    {
+        if (Player.Instance.canBuyTomatoad)
+        {
+            resultsText.text = monPlantStore.SellMonPlant("Giraffodil");
+        }
+        else
+        {
+            resultsText.text = "You have not unlocked this monster yet";
+        }
     }
 
     public void ShowSelf()

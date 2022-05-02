@@ -60,6 +60,7 @@ public class BattleManager : MonoBehaviour
             if (newEnemyHP < 0)
             {
                 newEnemyHP = 0;
+                EnableNextSeed();
                 battleUI.ShowWin();
             }
 
@@ -78,6 +79,7 @@ public class BattleManager : MonoBehaviour
             if (newEnemyHP < 0)
             {
                 newEnemyHP = 0;
+                EnableNextSeed();
                 battleUI.ShowWin();
             }
 
@@ -96,6 +98,7 @@ public class BattleManager : MonoBehaviour
             if (newEnemyHP < 0)
             {
                 newEnemyHP = 0;
+                EnableNextSeed();
                 battleUI.ShowWin();
             }
 
@@ -114,6 +117,7 @@ public class BattleManager : MonoBehaviour
             if (newEnemyHP < 0)
             {
                 newEnemyHP = 0;
+                EnableNextSeed();
                 battleUI.ShowWin();
             }
 
@@ -155,5 +159,16 @@ public class BattleManager : MonoBehaviour
         playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP = playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP;
         enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
         //SetupUI();
+    }
+
+    public void EnableNextSeed()
+    {
+        if (Player.Instance.canBuyTomatoad)
+        {
+            Player.Instance.canBuyGiraffodil = true;
+        } else
+        {
+            Player.Instance.canBuyTomatoad = true;
+        }
     }
 }

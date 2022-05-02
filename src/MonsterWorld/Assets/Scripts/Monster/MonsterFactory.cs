@@ -32,6 +32,8 @@ public class MonsterFactory
         monDictionary.Add("Advodoggo", new Monster("Advodoggo", "Sprites/advodogo"));
         monDictionary.Add("Strawbunny", new Monster("Strawbunny", "Sprites/strawbunny"));
         monDictionary.Add("Raccorn", new Monster("Raccorn", "Sprites/raccorn"));
+        monDictionary.Add("Tomatoad", new Monster("Tomatoad", "Sprites/tomatoad"));
+        monDictionary.Add("Giraffodil", new Monster("Giraffodil", "Sprites/giraffodil"));
     }
 
     public Monster GetMon(string value)
