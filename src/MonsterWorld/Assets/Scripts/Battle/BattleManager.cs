@@ -43,6 +43,9 @@ public class BattleManager : MonoBehaviour
         {
             playerBattler.monsterBattler = Player.Instance.playerInventory.GetBattler(playerMonIndex);
         }
+
+        Debug.Log(playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP);
+
         SetupUI();
     }
 

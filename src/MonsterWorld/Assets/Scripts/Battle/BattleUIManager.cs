@@ -34,7 +34,6 @@ public class BattleUIManager : MonoBehaviour
     public void SetupUI()
     {
         winScreen.gameObject.SetActive(false);
-        Debug.Log(battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP);
 
         this.playerMonName.text = battleManager.playerBattler.monsterBattler.battleStats.Name;
         this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
@@ -45,7 +44,6 @@ public class BattleUIManager : MonoBehaviour
         this.playerMonType.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterBattleType.Name} Type";
         this.enemyMonType.text = $"{battleManager.enemyMonster.battleStats.MonsterBattleType.Name} Type";
 
-        Debug.Log(battleManager.playerBattler.monsterBattler.monsterSprite);
         this.playerSprite.sprite = battleManager.playerBattler.monsterBattler.monsterSprite;
 
         SetUpButtons();
