@@ -161,13 +161,13 @@ public class MonsterStorageUI : MonoBehaviour
         Player.Instance.canMove = false;
         storageUI.gameObject.SetActive(true);
         UpdateUI();
-        MonsterMenuUI.SharedInstance.canOpen = false;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = false;
     }
 
     public void HideSelf()
     {
         Player.Instance.canMove = true;
         storageUI.gameObject.SetActive(false);
-        MonsterMenuUI.SharedInstance.canOpen = true;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = true;
     }
 }

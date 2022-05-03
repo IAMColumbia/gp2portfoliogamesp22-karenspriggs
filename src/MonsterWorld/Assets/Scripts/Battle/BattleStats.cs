@@ -50,6 +50,11 @@ public class BattleStats
         this.name = _monsterName;
     }
 
+    public void FillHP()
+    {
+        this.monsterStats.CurrentHP = this.monsterStats.MaxHP;
+    }
+
     // This is in here because it can have access to the battle stats of its own monster
     public int DetermineDamage(Move move, BattleStats otherMonster)
     {

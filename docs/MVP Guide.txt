@@ -1,0 +1,13 @@
+Welcome to Monster World :)
+You can grow monsters from seeds in your farm to battle other monster tamers and get even more monsters to grow.
+You can also grow food to help raise your monster's stats. 
+This will help you in your battles to earn more seeds.
+
+Your monsters have four stats: HP, ATK, DEF, and SPD.
+They also have a type that is weak to and strong against another type.
+Flower type is strong against fruit type and weak to veggie type.
+Fruit type is strong against veggie type and weak to flower type.
+Veggie type is strong against flower type and weak to fruit type.
+If you use a move that is strong against the enemy monster's type, it will deal double damage.
+If you use a move that is weak against the enemy monster's type, it will only do half.
+

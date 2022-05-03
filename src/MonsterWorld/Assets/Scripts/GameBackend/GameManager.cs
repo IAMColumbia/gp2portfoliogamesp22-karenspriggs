@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public BattleManager battleManager;
     public FarmManager farmManager;
     public GameStateManager gameStateManager;
-    UIManager uiManager;
+    public UIManager uiManager;
 
     // Start is called before the first frame update
     void Start()

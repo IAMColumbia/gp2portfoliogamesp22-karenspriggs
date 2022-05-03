@@ -108,7 +108,7 @@ public class UnityMonStore : MonoBehaviour
     public void ShowSelf()
     {
         Player.Instance.canMove = false;
-        //MonsterMenuUI.SharedInstance.canOpen = false;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = false;
         Menu.SetActive(true);
         beingShown = true;
     }
@@ -116,7 +116,7 @@ public class UnityMonStore : MonoBehaviour
     public void HideSelf()
     {
         Player.Instance.canMove = true;
-        //MonsterMenuUI.SharedInstance.canOpen = true;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = true;
         Menu.SetActive(false);
         beingShown = false;
     }

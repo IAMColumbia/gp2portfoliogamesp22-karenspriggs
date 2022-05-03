@@ -8,11 +8,13 @@ ScriptsOnlyBuild:
     - EnemyMonster
     - FoodPlantPlot
     - GameManager
+    - HealthRestore
     - MonsterFeedUI
     - MonsterMenuUI
     - MonsterPlantPlot
     - MonsterStorageUI
     - Pickup
+    - PlantTextPrompt
     - Player
     - UnityFood
     - UnityFoodStore
@@ -100,31 +102,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3384}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 3542}
+      Script: {instanceID: 3386}
     - Class: 114
-      Script: {instanceID: 3644}
+      Script: {instanceID: 3544}
     - Class: 114
-      Script: {instanceID: 4498}
+      Script: {instanceID: 3646}
     - Class: 114
-      Script: {instanceID: 4530}
+      Script: {instanceID: 4500}
     - Class: 114
-      Script: {instanceID: 5018}
+      Script: {instanceID: 4532}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 5020}
     - Class: 114
-      Script: {instanceID: 5042}
+      Script: {instanceID: 5038}
     - Class: 114
-      Script: {instanceID: 5192}
+      Script: {instanceID: 5044}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5194}
     - Class: 114
-      Script: {instanceID: 5428}
+      Script: {instanceID: 5202}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 5430}
     - Class: 114
-      Script: {instanceID: 5656}
+      Script: {instanceID: 5456}
+    - Class: 114
+      Script: {instanceID: 5658}
+    - Class: 114
+      Script: {instanceID: 19148}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -224,7 +230,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f5115b10dc06ece592cb1c2ab023ac00
+      Hash: 8232304da06427113ddf657287bddbc0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -248,7 +254,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: f84bd5e15dd2e2fd50af7a7f847c669c
+      Hash: b2716136684ff6d9ece9031b81bbb871
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MonsterMenuUI
@@ -408,6 +414,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 13c86791ac69022bd973cb938f8721f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlantTextPrompt
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -722,7 +734,7 @@ ScriptsOnlyBuild:
     className: MonsterInstantiator
   - hash:
       serializedVersion: 2
-      Hash: 46d327d91f3ab04b71ff549be85aa2a4
+      Hash: 4dc26f42135d7a412fac183d9308319b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -792,7 +804,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: 13c86791ac69022bd973cb938f8721f9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthRestore
   platform: 19
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Users/Admin/Downloads/gp2portfoliogamesp22-karenspriggs/artifactReleases/2VS/MonsterWorld.exe
+  playerPath: C:/Users/Admin/Downloads/gp2portfoliogamesp22-karenspriggs/artifactReleases/3FirstBuild/MonsterWorld.exe

@@ -1,0 +1,14 @@
+Additions/ New Features:
+- Player unlocks new monster seeds when they beat the other tamer
+- Added 3 new monsters (tomatoad, giraffodil, pumpkitty)
+- Removed buttons to open stores and switch to battle screen
+- Added dialogue for enemy tamer that shows before battling
+- Added interaction indicators based on player proximity
+- Visuals updated for farming and battle screens, lots of new sprites
+- Player can now heal their team in the farm
+
+Features for Next Time:
+- Polishing UI
+- Possibly adding animations for battle screen
+- Make it so the enemy has a beefy version of the monster the player gets for beating them
+- Add audio

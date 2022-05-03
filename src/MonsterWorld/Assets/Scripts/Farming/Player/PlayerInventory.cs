@@ -6,6 +6,13 @@ public class PlayerInventory
 {
     private List<Monster> playerMonsters;
     private List<Food> playerFood;
+
+    public List<Monster> PlayerMonsters
+    {
+        get { return playerMonsters; }
+        set { playerMonsters = value; }
+    }
+
     public int teamSize;
 
     public int maxTeamSize;

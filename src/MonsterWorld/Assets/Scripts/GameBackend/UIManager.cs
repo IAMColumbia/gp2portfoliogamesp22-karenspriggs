@@ -11,6 +11,8 @@ public class UIManager
     UnityMonStore monsterStore;
     UnityFoodStore foodStore;
 
+    public bool canOpenMonMenu;
+
     public UIManager(GameObject monplantUI, GameObject foodplantUI)
     {
         this.MonPlantShopUIPanel = monplantUI;
@@ -27,6 +29,8 @@ public class UIManager
 
         this.monsterStore.HideSelf();
         this.foodStore.HideSelf();
+
+        canOpenMonMenu = true;
     }
 
     public void EnterFoodShop()

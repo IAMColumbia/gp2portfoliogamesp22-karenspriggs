@@ -70,14 +70,14 @@ public class UnityFoodStore : MonoBehaviour
     public void ShowSelf()
     {
         Player.Instance.canMove = false;
-        // MonsterMenuUI.SharedInstance.canOpen = false;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = false;
         Menu.SetActive(true);
     }
 
     public void HideSelf()
     {
         Player.Instance.canMove = true;
-        //MonsterMenuUI.SharedInstance.canOpen = true;
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = true;
         Menu.SetActive(false);
     }
 }

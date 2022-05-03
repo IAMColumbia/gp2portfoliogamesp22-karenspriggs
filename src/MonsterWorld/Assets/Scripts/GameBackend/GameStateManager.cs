@@ -26,7 +26,8 @@ public class GameStateManager
     {
         this.currentGameState = GameStates.Farming;
         ActivateObjects(farmingGameObjects);
-        DeactivateObjects(battleGameObjects);        
+        DeactivateObjects(battleGameObjects);
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = true;
     }
 
     public void SetBattleState()
@@ -34,6 +35,7 @@ public class GameStateManager
         this.currentGameState = GameStates.Battling;
         ActivateObjects(battleGameObjects);
         DeactivateObjects(farmingGameObjects);
+        //GameManager.SharedInstance.uiManager.canOpenMonMenu = false;
     }
 
     void ActivateObjects(List<GameObject> objects)
