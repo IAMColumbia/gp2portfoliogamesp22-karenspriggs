@@ -29,7 +29,7 @@ public class MonsterMenuUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && GameManager.SharedInstance.gameStateManager.currentGameState == GameStates.Farming)
         {
             if (isVisible)
             {
@@ -41,6 +41,7 @@ public class MonsterMenuUI : MonoBehaviour
                 uiMenu.SetActive(true);
                 Player.Instance.canMove = false;
                 isVisible = true;
+                UpdateText();
             }
         }
     }

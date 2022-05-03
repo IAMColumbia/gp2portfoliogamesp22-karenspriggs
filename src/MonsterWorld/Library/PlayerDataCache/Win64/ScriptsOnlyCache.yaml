@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Assets.Scripts.Monster.MonsterInstantiator
     - BattleManager
+    - BattleTrigger
     - BattleUIManager
     - EnemyMonster
     - FoodPlantPlot
@@ -109,19 +110,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4530}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5038}
+      Script: {instanceID: 5036}
     - Class: 114
-      Script: {instanceID: 5188}
+      Script: {instanceID: 5042}
     - Class: 114
-      Script: {instanceID: 5196}
+      Script: {instanceID: 5192}
     - Class: 114
-      Script: {instanceID: 5424}
+      Script: {instanceID: 5200}
     - Class: 114
-      Script: {instanceID: 5450}
+      Script: {instanceID: 5428}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5454}
+    - Class: 114
+      Script: {instanceID: 5656}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -221,7 +224,7 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: f97ccd3793ff82ab3e3807df7eef2fa3
+      Hash: f5115b10dc06ece592cb1c2ab023ac00
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -233,7 +236,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 92e6bc09ecac288452d66ae367671895
+      Hash: ecebd194cb41f31da84b3d7847c6e382
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnityFoodStore
@@ -461,7 +464,7 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
-      Hash: 80a4f9dcff76fa7082d1ae548a9b324a
+      Hash: a0fdce52d45d609bd96d3f5c0839fd71
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MonsterStorageUI
@@ -677,6 +680,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 3a0e70950d158c0696c897d92b591bad
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BattleTrigger
+  - hash:
+      serializedVersion: 2
       Hash: f5e64c13ed54381873aa5ff44ab0d33d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -773,7 +782,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: dd8bcaef22c52805174796ecf7d0ec32
+      Hash: 401fc72bbde0057469f4b528e0377d0a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnityMonStore
