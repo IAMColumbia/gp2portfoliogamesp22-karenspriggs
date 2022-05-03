@@ -37,6 +37,19 @@ public class BattleStats
         this.name = _monsterName;
     }
 
+    public BattleStats(BattleType _monType, string _moveSetKey, string _monsterName, string _difficultyLevel)
+    {
+        this.monsterBattleType = _monType;
+        this.monsterMoveSet = MoveSetFactory.Instance.GetMoveSet(_moveSetKey);
+
+        if (_difficultyLevel == "Boss")
+        {
+            this.monsterStats = new Stats(40, 40, 4, 4, 4);
+        }
+
+        this.name = _monsterName;
+    }
+
     // This is in here because it can have access to the battle stats of its own monster
     public int DetermineDamage(Move move, BattleStats otherMonster)
     {

@@ -170,5 +170,10 @@ public class BattleManager : MonoBehaviour
         {
             Player.Instance.canBuyTomatoad = true;
         }
+
+        if(Player.Instance.canBuyGiraffodil && Player.Instance.canBuyTomatoad)
+        {
+            Player.Instance.canBuyPumpkitty = true;
+        }
     }
 }

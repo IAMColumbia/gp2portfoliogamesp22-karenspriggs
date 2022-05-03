@@ -34,6 +34,7 @@ public class MonPlantFactory
         monPlantDictionary.Add("Raccorn", new MonsterPlant("Raccorn"));
         monPlantDictionary.Add("Tomatoad", new MonsterPlant("Tomatoad"));
         monPlantDictionary.Add("Giraffodil", new MonsterPlant("Giraffodil"));
+        monPlantDictionary.Add("Pumpkitty", new MonsterPlant("Pumpkitty"));
     }
 
     public MonsterPlant GetMonPlant(string value)

@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
     public bool canBuyTomatoad;
     public bool canBuyGiraffodil;
+    public bool canBuyPumpkitty;
 
     public int movementIncrement;
     public bool canMove;
@@ -21,6 +22,7 @@ public class Player : MonoBehaviour
         playerMovement = new PlayerMovement(transform.position, movementIncrement);
         canBuyTomatoad = false;
         canBuyGiraffodil = false;
+        canBuyPumpkitty = false;
     }
 
     private void Awake()

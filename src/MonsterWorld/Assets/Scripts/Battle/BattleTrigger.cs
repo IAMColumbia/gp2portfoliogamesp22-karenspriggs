@@ -40,6 +40,7 @@ public class BattleTrigger : MonoBehaviour
                 } else
                 {
                     dialogueBox.gameObject.SetActive(false);
+                    //MonsterMenuUI.SharedInstance.canOpen = false;
                     GameManager.SharedInstance.TurnOnBattleState();
                 }
             }   

@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> battleObjects;
     public List<GameObject> farmingObjects;
-    public GameObject monPlantShopUI;
-    public GameObject foodPlantShopUI;
 
     public UnityMonStore monsterStore;
     public UnityFoodStore foodStore;

@@ -93,9 +93,22 @@ public class UnityMonStore : MonoBehaviour
         }
     }
 
+    public void BuyPumpkitty()
+    {
+        if (Player.Instance.canBuyPumpkitty)
+        {
+            resultsText.text = monPlantStore.SellMonPlant("Pumpkitty");
+        }
+        else
+        {
+            resultsText.text = "You have not unlocked this monster yet";
+        }
+    }
+
     public void ShowSelf()
     {
         Player.Instance.canMove = false;
+        //MonsterMenuUI.SharedInstance.canOpen = false;
         Menu.SetActive(true);
         beingShown = true;
     }
@@ -103,6 +116,7 @@ public class UnityMonStore : MonoBehaviour
     public void HideSelf()
     {
         Player.Instance.canMove = true;
+        //MonsterMenuUI.SharedInstance.canOpen = true;
         Menu.SetActive(false);
         beingShown = false;
     }

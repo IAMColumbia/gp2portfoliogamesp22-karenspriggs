@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MonsterMenuUI : MonoBehaviour
 {
+    public static MonsterMenuUI SharedInstance;
+
     public Text monster1name;
     public Text monster1stats;
     public Text monster2name;
@@ -19,17 +21,23 @@ public class MonsterMenuUI : MonoBehaviour
 
     bool isVisible;
 
+    public bool canOpen;
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateText();
         isVisible = false;
+        canOpen = true;
+
+        SharedInstance = this;                  
+        HideSelf();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && GameManager.SharedInstance.gameStateManager.currentGameState == GameStates.Farming)
+        if (Input.GetKeyDown(KeyCode.Escape) && canOpen)
         {
             if (isVisible)
             {
@@ -88,5 +96,12 @@ public class MonsterMenuUI : MonoBehaviour
         feedMenu.SetActive(false);
         uiMenu.SetActive(true);
         isVisible = true;
+    }
+
+    public void HideSelf()
+    {
+        feedMenu.SetActive(false);
+        uiMenu.SetActive(false);
+        isVisible = false;
     }
 }

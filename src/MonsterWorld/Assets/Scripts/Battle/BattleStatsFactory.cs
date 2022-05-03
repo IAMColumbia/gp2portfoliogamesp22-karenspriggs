@@ -34,6 +34,7 @@ public class BattleStatsFactory
         statsDictionary.Add("Raccorn", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Raccorn"));
         statsDictionary.Add("Tomatoad", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Tomatoad"));
         statsDictionary.Add("Giraffodil", new BattleStats(BattleTypeDatabase.FlowerType, "Default", "Giraffodil"));
+        statsDictionary.Add("Pumpkitty", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Pumpkitty"));
     }
 
     public BattleStats GetStats(string value)

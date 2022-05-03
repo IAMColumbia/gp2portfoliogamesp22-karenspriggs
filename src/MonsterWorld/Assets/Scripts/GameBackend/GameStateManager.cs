@@ -26,7 +26,7 @@ public class GameStateManager
     {
         this.currentGameState = GameStates.Farming;
         ActivateObjects(farmingGameObjects);
-        DeactivateObjects(battleGameObjects);
+        DeactivateObjects(battleGameObjects);        
     }
 
     public void SetBattleState()
