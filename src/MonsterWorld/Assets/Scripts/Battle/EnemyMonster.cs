@@ -10,6 +10,8 @@ public class EnemyMonster : MonoBehaviour
     public Move MoveChosen;
     public string statsKey;
 
+    public Monster enemyMonster;
+
     private void Start()
     {
         this.battleStats = BattleStatsFactory.Instance.GetStats(statsKey);
