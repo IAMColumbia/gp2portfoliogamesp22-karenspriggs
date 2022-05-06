@@ -21,7 +21,7 @@ public class UnityFoodStore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             interactionText.gameObject.SetActive(true);
             triggerActive = true;
@@ -30,7 +30,7 @@ public class UnityFoodStore : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             interactionText.gameObject.SetActive(false);
             triggerActive = false;

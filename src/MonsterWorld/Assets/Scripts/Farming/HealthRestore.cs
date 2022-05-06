@@ -19,7 +19,7 @@ public class HealthRestore : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if(collision.gameObject.CompareTag("Player"))
         {
             inTrigger = true;
             interactionText.gameObject.SetActive(true);
@@ -28,10 +28,11 @@ public class HealthRestore : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
             inTrigger = false;
             interactionText.gameObject.SetActive(false);
+            interactionText.text = "Press Space to\nheal your team";
         }
     }
 
@@ -41,5 +42,7 @@ public class HealthRestore : MonoBehaviour
         {
             m.battleStats.FillHP();
         }
+
+        interactionText.text = "Team healed";
     }
 }

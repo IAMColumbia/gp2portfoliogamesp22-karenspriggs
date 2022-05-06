@@ -15,7 +15,7 @@ public class Stats
     public int CurrentHP
     {
         get { return currentHP; }
-        set { if (CurrentHP <= 0) { currentHP = 0; } else { currentHP = value; } }
+        set {    currentHP = value;  }
     }
     public int Attack { get { return attack; } set { attack = value; } }
     public int Defense { get { return defense; } set { defense = value; } }
