@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void TurnOnBattleState()
     {
         gameStateManager.SetBattleState();
+        battleManager.ResetEnemyHP();
         battleManager.SetMonster();
     }
 

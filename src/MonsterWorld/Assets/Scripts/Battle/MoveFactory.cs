@@ -32,6 +32,10 @@ public class MoveFactory
         moveDictionary.Add("FruitSlash", new Move("Fruit Slash", 4, BattleTypeDatabase.FruitType));
         moveDictionary.Add("FlowerBite", new Move("Flower Bite", 4, BattleTypeDatabase.FlowerType));
         moveDictionary.Add("FlowerSlash", new Move("Flower Slash", 2, BattleTypeDatabase.FlowerType));
+        moveDictionary.Add("FruitStomp", new Move("Fruit Stomp", 5, BattleTypeDatabase.FruitType));
+        moveDictionary.Add("VeggieBlast", new Move("Veggie Blast", 6, BattleTypeDatabase.VeggieType));
+        moveDictionary.Add("FruitRoar", new Move("Fruit Roar", 2, BattleTypeDatabase.FruitType));
+        moveDictionary.Add("FlowerWaltz", new Move("Flower Waltz", 5, BattleTypeDatabase.FlowerType));
     }
 
     public Move GetMove(string value)

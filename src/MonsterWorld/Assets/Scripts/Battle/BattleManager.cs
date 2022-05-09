@@ -161,6 +161,11 @@ public class BattleManager : MonoBehaviour
         //SetupUI();
     }
 
+    public void ResetEnemyHP()
+    {
+        enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
+    }
+
     public void EnableNextSeed()
     {
         if (Player.Instance.canBuyTomatoad)
