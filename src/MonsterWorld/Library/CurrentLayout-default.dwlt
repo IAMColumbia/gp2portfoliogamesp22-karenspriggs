@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -142,8 +142,8 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 678, y: 342}
+  m_MaxSize: {x: 12003, y: 8042}
   vertical: 0
   controlID: 70
 --- !u!114 &7
@@ -423,7 +423,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 40fbfffff442000038440000d0450000
+      m_ExpandedIDs: a0b8ffff40fbfffff4420000dc440000d0450000ec46000040480000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -483,9 +483,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.0640717, y: -1.6902226, z: 68.23748}
+    m_Target: {x: 860.33356, y: 406.23795, z: -33.92304}
     speed: 2
-    m_Value: {x: 2.5710871, y: -1.6199911, z: 70.20007}
+    m_Value: {x: 860.33356, y: 406.23795, z: -33.92304}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -536,9 +536,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.298464
+    m_Target: 709.5687
     speed: 2
-    m_Value: 13.925093
+    m_Value: 709.5687
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -799,22 +799,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Farming/Plants
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Farming/Plants
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Admin\Downloads\gp2portfoliogamesp22-karenspriggs\src\MonsterWorld
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 484b0000
-    m_LastClickedID: 19272
-    m_ExpandedIDs: 000000002a4b00002c4b00002e4b00003e4b000000ca9a3b
+    m_SelectedIDs: 2e4b0000
+    m_LastClickedID: 19246
+    m_ExpandedIDs: 000000002a4b00002c4b00002e4b0000404b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -867,8 +867,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 54150000
-    m_LastClickedInstanceID: 5460
+    m_SelectedInstanceIDs: 14480000
+    m_LastClickedInstanceID: 18452
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000823f0000be3f0000c4400000cc400000e0400000fa400000c43f0000d44c00001c400000744d000084710000968700001044000000000000
     m_RenameOverlay:

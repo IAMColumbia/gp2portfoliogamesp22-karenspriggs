@@ -24,6 +24,7 @@ public class BattleUIManager : MonoBehaviour
 
     public BattleManager battleManager;
     public GameObject winScreen;
+    public GameObject loseScreen;
 
     public void ConnectBattleManager(BattleManager battleManager)
     {
@@ -34,17 +35,19 @@ public class BattleUIManager : MonoBehaviour
     public void SetupUI()
     {
         winScreen.gameObject.SetActive(false);
+        loseScreen.gameObject.SetActive(false);
 
         this.playerMonName.text = battleManager.playerBattler.monsterBattler.battleStats.Name;
-        this.enemyMonName.text = $"Enemy {battleManager.enemyMonster.battleStats.Name}";
+        this.enemyMonName.text = $"Enemy {battleManager.enemyBattler.enemyMonster.battleStats.Name}";
         
         this.playerMonHP.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
-        this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP}";
 
         this.playerMonType.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterBattleType.Name} Type";
-        this.enemyMonType.text = $"{battleManager.enemyMonster.battleStats.MonsterBattleType.Name} Type";
+        this.enemyMonType.text = $"{battleManager.enemyBattler.enemyMonster.battleStats.MonsterBattleType.Name} Type";
 
         this.playerSprite.sprite = battleManager.playerBattler.monsterBattler.monsterSprite;
+        this.enemySprite.sprite = battleManager.enemyBattler.enemyMonster.monsterSprite;
 
         SetUpButtons();
     }
@@ -59,20 +62,20 @@ public class BattleUIManager : MonoBehaviour
 
     public void UseMove(int damage, int newHP, string moveName)
     {
-        this.enemyMonHP.text = $"{newHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{newHP} / {battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP}";
     }
 
     public void UseEnemyMove(int damage, int newHP, string moveName)
     {
-        this.playerMonHP.text = $"{newHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
-        this.enemyMoveText.text = $"Enemy {battleManager.enemyMonster.battleStats.Name} used {moveName}!";
+        this.playerMonHP.text = $"{newHP} / {battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMoveText.text = $"Enemy {battleManager.enemyBattler.enemyMonster.battleStats.Name} used {moveName}!";
     }
 
     public void ResetHP()
     {
         this.battleManager.ResetHPForTesting();
         this.playerMonHP.text = $"{battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
-        this.enemyMonHP.text = $"{battleManager.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.enemyMonHP.text = $"{battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.CurrentHP} / {battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP}";
     }
 
     public void ShowWin()
@@ -83,6 +86,17 @@ public class BattleUIManager : MonoBehaviour
     public void HideWin()
     {
         winScreen.gameObject.SetActive(false);
+        battleManager.ResetHPForTesting();
+    }
+
+    public void ShowLoss()
+    {
+        loseScreen.gameObject.SetActive(true);
+    }
+
+    public void HideLoss()
+    {
+        loseScreen.gameObject.SetActive(false);
         battleManager.ResetHPForTesting();
     }
 

@@ -17,6 +17,8 @@ public class ProgressManager
         canBuyGiraffodil = false;
         canBuyPumpkitty = false;
 
+        winIndex = 0;
+
         statKeys = new List<string>() { "BossTomatoad", "BossGiraffodil", "BossPumpkitty" };
     }
 
@@ -38,10 +40,16 @@ public class ProgressManager
                 }
             }
         }
+
+        if (winIndex < statKeys.Count)
+        {
+            winIndex++;
+        }
     }
 
     public Monster GetEnemyMonster()
     {
+        Debug.Log(MonsterFactory.Instance.GetMon(statKeys[winIndex]).battleStats.Name);
         return MonsterFactory.Instance.GetMon(statKeys[winIndex]);
     }
 }

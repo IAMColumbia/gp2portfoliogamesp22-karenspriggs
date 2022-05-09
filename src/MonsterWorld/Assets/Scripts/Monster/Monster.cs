@@ -9,6 +9,11 @@ public class Monster
     public MonsterMovement monMonvement;
     public Sprite monsterSprite;
 
+    public Monster()
+    {
+
+    }
+
     public Monster(string _statsKey)
     {
         this.battleStats = BattleStatsFactory.Instance.GetStats(_statsKey);

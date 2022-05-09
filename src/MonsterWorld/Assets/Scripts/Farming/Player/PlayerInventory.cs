@@ -114,4 +114,17 @@ public class PlayerInventory
 
         playerFood.Remove(playerFood[index]);
     }
+
+    public bool CheckIfLost()
+    {
+        foreach (Monster m in playerMonsters)
+        {
+            if (m.battleStats.MonsterStats.CurrentHP != 0)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
 }

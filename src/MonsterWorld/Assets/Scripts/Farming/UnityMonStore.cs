@@ -72,7 +72,7 @@ public class UnityMonStore : MonoBehaviour
 
     public void BuyTomatoad()
     {
-        if (Player.Instance.canBuyTomatoad)
+        if (GameManager.SharedInstance.progressManager.canBuyTomatoad)
         {
             resultsText.text = monPlantStore.SellMonPlant("Tomatoad");
         } else
@@ -83,7 +83,7 @@ public class UnityMonStore : MonoBehaviour
 
     public void BuyGiraffodil()
     {
-        if (Player.Instance.canBuyTomatoad)
+        if (GameManager.SharedInstance.progressManager.canBuyGiraffodil)
         {
             resultsText.text = monPlantStore.SellMonPlant("Giraffodil");
         }
@@ -95,7 +95,7 @@ public class UnityMonStore : MonoBehaviour
 
     public void BuyPumpkitty()
     {
-        if (Player.Instance.canBuyPumpkitty)
+        if (GameManager.SharedInstance.progressManager.canBuyPumpkitty)
         {
             resultsText.text = monPlantStore.SellMonPlant("Pumpkitty");
         }

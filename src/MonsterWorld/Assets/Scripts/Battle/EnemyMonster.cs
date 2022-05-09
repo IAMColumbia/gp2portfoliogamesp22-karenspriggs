@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMonster : MonoBehaviour
+public class EnemyMonster 
 {
     int moveIndex;
 
@@ -12,9 +12,10 @@ public class EnemyMonster : MonoBehaviour
 
     public Monster enemyMonster;
 
-    private void Start()
+    public EnemyMonster()
     {
-        this.battleStats = BattleStatsFactory.Instance.GetStats(statsKey);
+        this.enemyMonster = new Monster();
+        this.enemyMonster = GameManager.SharedInstance.progressManager.GetEnemyMonster();
     }
 
     public void DetermineMove()
@@ -30,24 +31,30 @@ public class EnemyMonster : MonoBehaviour
 
         if (moveIndex == 0)
         {
-            moveToUse = this.battleStats.MonsterMoveSet.Move1;
+            moveToUse = this.enemyMonster.battleStats.MonsterMoveSet.Move1;
         }
 
         if (moveIndex == 1)
         {
-            moveToUse = this.battleStats.MonsterMoveSet.Move2;
+            moveToUse = this.enemyMonster.battleStats.MonsterMoveSet.Move2;
         }
 
         if (moveIndex == 2)
         {
-            moveToUse = this.battleStats.MonsterMoveSet.Move3;
+            moveToUse = this.enemyMonster.battleStats.MonsterMoveSet.Move3;
         }
 
         if (moveIndex == 3)
         {
-            moveToUse = this.battleStats.MonsterMoveSet.Move4;
+            moveToUse = this.enemyMonster.battleStats.MonsterMoveSet.Move4;
         }
 
         return moveToUse;
+    }
+
+    public void UpdateMonster()
+    {
+        this.enemyMonster = GameManager.SharedInstance.progressManager.GetEnemyMonster();
+        Debug.Log(this.enemyMonster.battleStats.Name);
     }
 }

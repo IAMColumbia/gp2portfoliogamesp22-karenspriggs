@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour
     public FarmManager farmManager;
     public GameStateManager gameStateManager;
     public UIManager uiManager;
+    public ProgressManager progressManager;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         gameStateManager = new GameStateManager();
         gameStateManager.battleGameObjects = battleObjects;
@@ -34,6 +35,8 @@ public class GameManager : MonoBehaviour
         farmManager = new FarmManager(plotSize, monsterPlantPlots, foodPlantPlots);
 
         uiManager = new UIManager(monsterStore, foodStore, monStorageUI);
+
+        progressManager = new ProgressManager();
 
         SharedInstance = this;
     }

@@ -15,7 +15,7 @@ public enum BattleState
 public class BattleManager : MonoBehaviour
 {
     //public UnityMonster playerMonster;
-    public EnemyMonster enemyMonster;
+    public EnemyMonster enemyBattler;
 
     public Battler playerBattler;
     //public Battler enemyBattler;
@@ -24,6 +24,8 @@ public class BattleManager : MonoBehaviour
     public BattleState battleState;
 
     public int playerMonIndex;
+
+    bool playerWon = false;
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class BattleManager : MonoBehaviour
     {
         playerMonIndex = 0;
         playerBattler = new Battler();
+        enemyBattler = new EnemyMonster();
         this.battleState = BattleState.Start;
     }
 
@@ -44,7 +47,7 @@ public class BattleManager : MonoBehaviour
             playerBattler.monsterBattler = Player.Instance.playerInventory.GetBattler(playerMonIndex);
         }
 
-        Debug.Log(playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP);
+        playerWon = false;
 
         SetupUI();
     }
@@ -54,18 +57,24 @@ public class BattleManager : MonoBehaviour
     {
         if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1, enemyMonster.battleStats);
-            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1, enemyBattler.enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyBattler.enemyMonster.battleStats);
 
-            if (newEnemyHP < 0)
+            if (newEnemyHP <= 0)
             {
                 newEnemyHP = 0;
-                EnableNextSeed();
+                GameManager.SharedInstance.progressManager.UpdateCanBuy();
+                playerWon = true;
                 battleUI.ShowWin();
             }
 
             battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move1.Name);
             EnemyTurn();
+
+            if (Player.Instance.playerInventory.CheckIfLost() && !playerWon)
+            {
+                battleUI.ShowLoss();
+            }
         }
     }
 
@@ -73,18 +82,24 @@ public class BattleManager : MonoBehaviour
     {
         if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2, enemyMonster.battleStats);
-            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2, enemyBattler.enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyBattler.enemyMonster.battleStats);
 
-            if (newEnemyHP < 0)
+            if (newEnemyHP <= 0)
             {
                 newEnemyHP = 0;
-                EnableNextSeed();
+                GameManager.SharedInstance.progressManager.UpdateCanBuy();
+                playerWon = true;
                 battleUI.ShowWin();
             }
 
             battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move2.Name);
             EnemyTurn();
+
+            if (Player.Instance.playerInventory.CheckIfLost() && !playerWon)
+            {
+                battleUI.ShowLoss();
+            }
         }
     }
 
@@ -92,18 +107,24 @@ public class BattleManager : MonoBehaviour
     {
         if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3, enemyMonster.battleStats);
-            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3, enemyBattler.enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyBattler.enemyMonster.battleStats);
 
-            if (newEnemyHP < 0)
+            if (newEnemyHP <= 0)
             {
                 newEnemyHP = 0;
-                EnableNextSeed();
+                GameManager.SharedInstance.progressManager.UpdateCanBuy();
+                playerWon = true;
                 battleUI.ShowWin();
             }
 
             battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move3.Name);
             EnemyTurn();
+
+            if (Player.Instance.playerInventory.CheckIfLost() && !playerWon)
+            {
+                battleUI.ShowLoss();
+            }
         }
     }
 
@@ -111,18 +132,24 @@ public class BattleManager : MonoBehaviour
     {
         if (playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP > 0)
         {
-            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4, enemyMonster.battleStats);
-            int newEnemyHP = ApplyDamage(damage, enemyMonster.battleStats);
+            int damage = playerBattler.monsterBattler.battleStats.DetermineDamage(playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4, enemyBattler.enemyMonster.battleStats);
+            int newEnemyHP = ApplyDamage(damage, enemyBattler.enemyMonster.battleStats);
 
-            if (newEnemyHP < 0)
+            if (newEnemyHP <= 0)
             {
                 newEnemyHP = 0;
-                EnableNextSeed();
+                playerWon = true;
+                GameManager.SharedInstance.progressManager.UpdateCanBuy();
                 battleUI.ShowWin();
             }
 
             battleUI.UseMove(damage, newEnemyHP, playerBattler.monsterBattler.battleStats.MonsterMoveSet.Move4.Name);
             EnemyTurn();
+
+            if (Player.Instance.playerInventory.CheckIfLost() && !playerWon)
+            {
+                battleUI.ShowLoss();
+            }
         }
     }
 
@@ -136,14 +163,15 @@ public class BattleManager : MonoBehaviour
 
     void EnemyTurn()
     {
-        Move enemyMove = enemyMonster.UseMove();
+        Move enemyMove = enemyBattler.UseMove();
 
-        int damage = enemyMonster.battleStats.DetermineDamage(enemyMove, playerBattler.monsterBattler.battleStats);
+        int damage = enemyBattler.enemyMonster.battleStats.DetermineDamage(enemyMove, playerBattler.monsterBattler.battleStats);
         int newPlayerHP = ApplyDamage(damage, playerBattler.monsterBattler.battleStats);
 
-        if (newPlayerHP < 0)
+        if (newPlayerHP <= 0)
         {
             newPlayerHP = 0;
+            this.playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP = 0;
         }
 
         battleUI.UseEnemyMove(damage, newPlayerHP, enemyMove.Name);
@@ -157,28 +185,13 @@ public class BattleManager : MonoBehaviour
     public void ResetHPForTesting()
     {
         playerBattler.monsterBattler.battleStats.MonsterStats.CurrentHP = playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP;
-        enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
+        enemyBattler.enemyMonster.battleStats.MonsterStats.CurrentHP = enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP;
         //SetupUI();
     }
 
     public void ResetEnemyHP()
     {
-        enemyMonster.battleStats.MonsterStats.CurrentHP = enemyMonster.battleStats.MonsterStats.MaxHP;
-    }
-
-    public void EnableNextSeed()
-    {
-        if (Player.Instance.canBuyTomatoad)
-        {
-            Player.Instance.canBuyGiraffodil = true;
-        } else
-        {
-            Player.Instance.canBuyTomatoad = true;
-        }
-
-        if(Player.Instance.canBuyGiraffodil && Player.Instance.canBuyTomatoad)
-        {
-            Player.Instance.canBuyPumpkitty = true;
-        }
+        enemyBattler = new EnemyMonster();
+        enemyBattler.enemyMonster.battleStats.MonsterStats.CurrentHP = enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP;
     }
 }
