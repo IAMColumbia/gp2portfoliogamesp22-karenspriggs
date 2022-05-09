@@ -54,6 +54,7 @@ public class MonsterPlantPlot : PlantPlot
     public void SetMonsterPlant(MonsterPlant mp)
     {
         this.plantInPlot = mp;
+        this.plantInPlot.plantEvo = new PlantEvo();
         this.plotStatus = PlotStatus.Occupied;
         UpdateSprite(mp);
     }

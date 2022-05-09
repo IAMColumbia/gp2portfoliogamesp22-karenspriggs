@@ -12957,7 +12957,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -493, y: 381}
+  m_AnchoredPosition: {x: -550, y: 381}
   m_SizeDelta: {x: 569.5654, y: 70.8695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159549302
@@ -14759,6 +14759,7 @@ MonoBehaviour:
   - {fileID: 2087959601}
   monsterStore: {fileID: 753634691}
   foodStore: {fileID: 235578388}
+  monStorageUI: {fileID: 333802205}
   monsterPlantPlots:
   - {fileID: 1674074890}
   - {fileID: 1353971935}
@@ -17741,7 +17742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -493, y: 299}
+  m_AnchoredPosition: {x: -548, y: 299}
   m_SizeDelta: {x: 569.5654, y: 70.8695}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1643050797

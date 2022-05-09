@@ -41,7 +41,7 @@ public class UnityFoodStore : MonoBehaviour
     {
         if (triggerActive && !beingShown && Input.GetKeyDown(KeyCode.Space))
         {
-            ShowSelf();
+            GameManager.SharedInstance.uiManager.EnterFoodShop();
         }
     }
 

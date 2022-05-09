@@ -52,6 +52,7 @@ public class FoodPlantPlot : PlantPlot
     public void SetFoodPlant(FoodPlant fp)
     {
         this.plantInPlot = fp;
+        this.plantInPlot.plantEvo = new PlantEvo();
         this.plotStatus = PlotStatus.Occupied;
         UpdateSprite(fp);
     }

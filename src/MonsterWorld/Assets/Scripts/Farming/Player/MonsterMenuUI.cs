@@ -49,6 +49,7 @@ public class MonsterMenuUI : MonoBehaviour
                 uiMenu.SetActive(true);
                 Player.Instance.canMove = false;
                 isVisible = true;
+                GameManager.SharedInstance.uiManager.HideAllUI();
                 UpdateText();
             }
         }
