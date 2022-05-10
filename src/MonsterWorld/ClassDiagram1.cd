@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BattleManager">
+    <Position X="20.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAQAAAACAACGAAAAAIAAAAAMAAwEABAAAABACEAEA=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battler">
+    <Position X="16.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\Battler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleStats">
+    <Position X="13.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgIAAAACBQAAAAUAAAACAAAACAAQAg=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleStats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleStatsFactory">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAABAAAAAQAAAAAABAAE=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleStatsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleTrigger">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACgCCAAAAACAAAAAAAAAEgAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleType">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAABAAAQAAAAAAAAAACAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleTypeDatabase">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleTypeDatabase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleUIManager">
+    <Position X="18.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAWAAAAAYAFBEAiACQAAEAQABIAAABoRoAQAAQ=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleUIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyMonster">
+    <Position X="16.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAgABAAACAAAAAEAAgAAAAAAAAAACAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\EnemyMonster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Move">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAEEAAABEAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveFactory">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAABAAAAAAAABAAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Battle\MoveFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveSet">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAIABQAAAAUAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\MoveSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MoveSetFactory">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAIAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Battle\MoveSetFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Stats">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAEACBAJAAAQCAAAAAAgAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Battle\Stats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodPlant">
+    <Position X="6.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACI=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\FoodPlant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodPlantFactory">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAABABAAAQAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\FoodPlantFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodPlantPlot">
+    <Position X="0.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAACAACAQAAAAAAIAAEAAAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\FoodPlantPlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodPlantStore">
+    <Position X="13.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAQAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\FoodPlantStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonPlantFactory">
+    <Position X="15.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAQAAAAAAAAAAAAAABAAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\MonPlantFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonPlantStore">
+    <Position X="15.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\MonPlantStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterPlant">
+    <Position X="8.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\MonsterPlant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterPlantPlot">
+    <Position X="2.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAACAACAQAAAAAAIAAEAAAEAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\MonsterPlantPlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plant">
+    <Position X="8.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\Plant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantEvo">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAACAAAAAIAAICAAAAAAAAAAAAAIAAAAAQAQAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantEvo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantFactory">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantPlot">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAACAAEAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantPlot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlantTextPrompt">
+    <Position X="4.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAACAAAAAAAAAEAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantTextPrompt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlotHandler">
+    <Position X="4.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAgAAAAAgAABAAAEABA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlotHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterFeedUI">
+    <Position X="15.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADIAAEAACAAQYAAAAAAAEAQAAEAAAAAAACACABAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Player\MonsterFeedUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterMenuUI">
+    <Position X="17" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQRAgAAAACgAkAAQAJQAAAAAAAAAIQAAAMAAAAIAMIA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Player\MonsterMenuUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="1.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAgABgAAASAAAAAAAAAAAAASAAAACAgAEA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Player\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerInventory">
+    <Position X="3" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QBAAAAAAIAAAAAAABBAAEAgBFAAAAAAAAAEACgAFEAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Player\PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement">
+    <Position X="1.25" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAgAAAAAIAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialogue">
+    <Position X="4.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CABAAAAgCAAAAAAAAAAAAAQACAAAAgAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Dialogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FarmManager">
+    <Position X="6.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAgAAAIAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Assets\Scripts\Farming\FarmManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Food">
+    <Position X="8.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAACAAAQIgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Food.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FoodFactory">
+    <Position X="8.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Farming\FoodFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthRestore">
+    <Position X="4.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAACAAAAAAAACAAAAAAAAAEAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\HealthRestore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterStorage">
+    <Position X="13.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAQAAgBAAAAEAAAAACAAAAAAAAAAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\Farming\MonsterStorage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterStorageUI">
+    <Position X="18.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIwUAEmIAAQAAAEKCIQgACAAAEAAIQAkAEEAAAIgGIA=</HashCode>
+      <FileName>Assets\Scripts\Farming\MonsterStorageUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityFood">
+    <Position X="11.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACI=</HashCode>
+      <FileName>Assets\Scripts\Farming\UnityFood.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityFoodStore">
+    <Position X="11.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACABSAAAAACAQAAACAAAEAIIgAAAAAAAAMgAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\UnityFoodStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnityMonStore">
+    <Position X="10" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAABgAKAAAAACAABEAICgAABAEAAAMgAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\UnityMonStore.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager">
+    <Position X="6.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAAEAAAAAAAAAAQkAAAAIAQAAAEAAAAIAAAAIA=</HashCode>
+      <FileName>Assets\Scripts\GameBackend\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="1.25" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAEBAAAAAAAAQhAAAgyAAAIAIAIAAgAAIAIAEAMA=</HashCode>
+      <FileName>Assets\Scripts\GameBackend\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameStateManager">
+    <Position X="3" Y="24" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAIBAAEAAAACAAEAAACAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameBackend\GameStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProgressManager">
+    <Position X="4.75" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAACAWAAAAAAACAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameBackend\Progress Manager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Monster">
+    <Position X="8.75" Y="25.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAQQAAAAAAAQAAAAAQAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Monster\Monster.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterFactory">
+    <Position X="8.75" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABEAAAABAAAAAQAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\Monster\MonsterFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="BattleState">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAAAAAAAEAAAAAAAAAAAAABAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Battle\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlantEvoState">
+    <Position X="6.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantEvo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlotStatus">
+    <Position X="0.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Farming\Plants\PlantPlot.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GameStates">
+    <Position X="3" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameBackend\GameStateManager.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

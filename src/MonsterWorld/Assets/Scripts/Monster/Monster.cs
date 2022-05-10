@@ -16,7 +16,8 @@ public class Monster
 
     public Monster(string _statsKey)
     {
-        this.battleStats = BattleStatsFactory.Instance.GetStats(_statsKey);
+        battleStats = new BattleStats();
+        CopyBattleStats(BattleStatsFactory.Instance.GetStats(_statsKey));
     }
 
     public Monster(string _statsKey, string _spritePath)

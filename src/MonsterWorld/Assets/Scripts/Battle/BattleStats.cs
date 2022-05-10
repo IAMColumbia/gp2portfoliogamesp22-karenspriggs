@@ -77,6 +77,6 @@ public class BattleStats
 
     public string Describe()
     {
-        return $"HP: {MonsterStats.MaxHP} Attack: {MonsterStats.Attack} Defense: {MonsterStats.Defense} Speed: {MonsterStats.Speed}";
+        return $"HP: {MonsterStats.CurrentHP}/{MonsterStats.MaxHP} Attack: {MonsterStats.Attack} Defense: {MonsterStats.Defense} Speed: {MonsterStats.Speed}";
     }
 }

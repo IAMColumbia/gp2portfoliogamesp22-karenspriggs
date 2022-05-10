@@ -67,7 +67,7 @@ public class BattleUIManager : MonoBehaviour
 
     public void UseEnemyMove(int damage, int newHP, string moveName)
     {
-        this.playerMonHP.text = $"{newHP} / {battleManager.enemyBattler.enemyMonster.battleStats.MonsterStats.MaxHP}";
+        this.playerMonHP.text = $"{newHP} / {battleManager.playerBattler.monsterBattler.battleStats.MonsterStats.MaxHP}";
         this.enemyMoveText.text = $"Enemy {battleManager.enemyBattler.enemyMonster.battleStats.Name} used {moveName}!";
     }
 
