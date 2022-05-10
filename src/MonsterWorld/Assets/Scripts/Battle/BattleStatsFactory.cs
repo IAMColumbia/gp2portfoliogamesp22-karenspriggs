@@ -28,18 +28,18 @@ public class BattleStatsFactory
 
     void FillDictionary()
     {
-        statsDictionary.Add("SunflowerLion", new BattleStats(BattleTypeDatabase.FlowerType, "Default", "SunflowerLion"));
-        statsDictionary.Add("Advodoggo", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Advodoggo"));
-        statsDictionary.Add("Strawbunny", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Strawbunny"));
-        statsDictionary.Add("Raccorn", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Raccorn"));
-        statsDictionary.Add("Tomatoad", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Tomatoad"));
-        statsDictionary.Add("Giraffodil", new BattleStats(BattleTypeDatabase.FlowerType, "Default", "Giraffodil"));
-        statsDictionary.Add("Pumpkitty", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Pumpkitty"));
+        statsDictionary.Add("SunflowerLion", new BattleStats(BattleTypeDatabase.FlowerType, "Flower", "SunflowerLion"));
+        statsDictionary.Add("Advodoggo", new BattleStats(BattleTypeDatabase.FruitType, "Fruit", "Advodoggo"));
+        statsDictionary.Add("Strawbunny", new BattleStats(BattleTypeDatabase.FruitType, "Fruit", "Strawbunny"));
+        statsDictionary.Add("Raccorn", new BattleStats(BattleTypeDatabase.VeggieType, "Veggie", "Raccorn"));
+        statsDictionary.Add("Tomatoad", new BattleStats(BattleTypeDatabase.FruitType, "Fruit", "Tomatoad"));
+        statsDictionary.Add("Giraffodil", new BattleStats(BattleTypeDatabase.FlowerType, "Flower", "Giraffodil"));
+        statsDictionary.Add("Pumpkitty", new BattleStats(BattleTypeDatabase.VeggieType, "Veggie", "Pumpkitty"));
 
         //Boss Monsters
-        statsDictionary.Add("BossTomatoad", new BattleStats(BattleTypeDatabase.FruitType, "Default", "Tomatoad", "Boss"));
-        statsDictionary.Add("BossGiraffodil", new BattleStats(BattleTypeDatabase.FlowerType, "Default", "Giraffodil", "Boss"));
-        statsDictionary.Add("BossPumpkitty", new BattleStats(BattleTypeDatabase.VeggieType, "Default", "Pumpkitty", "Boss"));
+        statsDictionary.Add("BossTomatoad", new BattleStats(BattleTypeDatabase.FruitType, "Fruit", "Tomatoad", "Boss"));
+        statsDictionary.Add("BossGiraffodil", new BattleStats(BattleTypeDatabase.FlowerType, "Flower", "Giraffodil", "Boss"));
+        statsDictionary.Add("BossPumpkitty", new BattleStats(BattleTypeDatabase.VeggieType, "Veggie", "Pumpkitty", "Boss"));
     }
 
     public BattleStats GetStats(string value)

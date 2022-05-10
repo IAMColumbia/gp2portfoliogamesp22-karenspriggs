@@ -23,6 +23,15 @@ public class MoveSetFactory
     public MoveSetFactory()
     {
         movesetDictionary = new Dictionary<string, MoveSet>();
+        FillDictionary();
+    }
+
+    void FillDictionary()
+    {
+        movesetDictionary.Add("Default", new MoveSet());
+        movesetDictionary.Add("Fruit", new MoveSet("FruitSlash", "FruitStomp", "FruitRoar", "FruitScratch"));
+        movesetDictionary.Add("Veggie", new MoveSet("VeggieBite", "VeggieBlast", "VeggieChop", "VeggieKick"));
+        movesetDictionary.Add("Flower", new MoveSet("FlowerWaltz", "FlowerBite", "FlowerSlash", "FlowerPunch"));
     }
 
     public MoveSet GetMoveSet(string value)
@@ -35,12 +44,7 @@ public class MoveSetFactory
         }
         else
         {
-            switch (value)
-            {
-                case ("Default"):
-                    ms = new MoveSet();
-                    break;
-            }
+            Debug.Log($"{value} is not a moveset");
         }
 
         return ms;
