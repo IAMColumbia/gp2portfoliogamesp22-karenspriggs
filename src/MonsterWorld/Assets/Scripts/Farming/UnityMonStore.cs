@@ -42,6 +42,7 @@ public class UnityMonStore : MonoBehaviour
     {
         if (triggerActive && !beingShown && Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log(GameManager.SharedInstance);
             GameManager.SharedInstance.uiManager.EnterMonShop();
         }
     }

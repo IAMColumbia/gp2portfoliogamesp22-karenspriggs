@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public ProgressManager progressManager;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         gameStateManager = new GameStateManager();
         gameStateManager.battleGameObjects = battleObjects;
@@ -38,14 +38,17 @@ public class GameManager : MonoBehaviour
 
         progressManager = new ProgressManager();
 
-        SharedInstance = this;
+        if (SharedInstance == null)
+        {
+            SharedInstance = this;
+        }
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            farmManager.plotHandler.FillFirstFoodPlot(FoodPlantFactory.Instance.GetFoodPlant("HP Berry"));
+            //farmManager.plotHandler.FillFirstFoodPlot(FoodPlantFactory.Instance.GetFoodPlant("HP Berry"));
         }
     }
 
